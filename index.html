@@ -1,189 +1,237 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sadhya Sri Communications</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Sadhya Sri Communications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      margin:0;
-      font-family:'Segoe UI', Arial, sans-serif;
-      background:#f2f4f8;
-      color:#333;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
 
-    .header{
-      background:linear-gradient(135deg,#1e3c72,#2a5298);
-      color:#fff;
-      text-align:center;
-      padding:30px 15px;
-    }
+body{
+  background:#f2f6fb;
+}
 
-    .header img{
-      width:130px;
-      margin-bottom:10px;
-    }
+/* MAIN CARD */
+.wrapper{
+  max-width:1200px;
+  margin:40px auto;
+  background:#fff;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
 
-    .header h1{
-      margin:10px 0 5px;
-      font-size:30px;
-      letter-spacing:1px;
-    }
+/* HEADER / HERO */
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  padding:40px;
+  align-items:center;
+}
 
-    .header p{
-      margin:0;
-      font-size:16px;
-      opacity:0.9;
-    }
+.hero-left{
+  flex:1;
+  min-width:300px;
+}
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:20px;
-    }
+.hero-left img{
+  width:80px;
+  margin-bottom:15px;
+}
 
-    .card{
-      background:#fff;
-      border-radius:10px;
-      padding:20px;
-      margin-bottom:20px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    }
+.hero-left h1{
+  font-size:46px;
+  font-weight:800;
+  color:#000;
+  line-height:1.2;
+}
 
-    h2{
-      color:#1e3c72;
-      margin-bottom:10px;
-    }
+.hero-left h1 span{
+  color:#2a7de1;
+}
 
-    ul{
-      padding-left:20px;
-    }
+.hero-left p{
+  margin:15px 0;
+  font-size:18px;
+  color:#555;
+}
 
-    ul li{
-      margin-bottom:6px;
-    }
+.services-list{
+  margin:20px 0;
+}
 
-    .contact a{
-      color:#1e3c72;
-      text-decoration:none;
-      font-weight:600;
-    }
+.services-list li{
+  list-style:none;
+  margin:10px 0;
+  font-size:16px;
+}
 
-    iframe{
-      width:100%;
-      height:250px;
-      border:0;
-      border-radius:10px;
-      margin-top:10px;
-    }
+.services-list li::before{
+  content:"✔";
+  color:#2a7de1;
+  margin-right:10px;
+  font-weight:bold;
+}
 
-    .footer{
-      background:#1e3c72;
-      color:#fff;
-      text-align:center;
-      padding:12px;
-      font-size:14px;
-    }
+.btn-group{
+  margin-top:25px;
+}
 
-    /* Floating buttons */
-    .call-float{
-      position:fixed;
-      bottom:90px;
-      right:20px;
-      background:#0b5ed7;
-      color:#fff;
-      font-size:26px;
-      padding:14px 16px;
-      border-radius:50%;
-      text-decoration:none;
-      box-shadow:0 5px 15px rgba(0,0,0,0.3);
-      z-index:1000;
-    }
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:10px;
+}
 
-    .whatsapp-float{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25d366;
-      color:#fff;
-      font-size:26px;
-      padding:14px 16px;
-      border-radius:50%;
-      text-decoration:none;
-      box-shadow:0 5px 15px rgba(0,0,0,0.3);
-      z-index:1000;
-    }
+.btn-primary{
+  background:#000;
+  color:#fff;
+}
 
-    .call-float:hover,
-    .whatsapp-float:hover{
-      transform:scale(1.1);
-    }
-  </style>
+.btn-outline{
+  border:2px solid #000;
+  color:#000;
+}
+
+/* RIGHT SIDE IMAGE */
+.hero-right{
+  flex:1;
+  min-width:300px;
+  text-align:center;
+}
+
+.hero-right img{
+  width:100%;
+  max-width:420px;
+}
+
+/* CONTACT BAR */
+.contact-bar{
+  background:#f8fbff;
+  padding:25px 40px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.contact-item{
+  margin:10px 0;
+  font-size:16px;
+}
+
+.contact-item strong{
+  color:#2a7de1;
+}
+
+/* FLOATING BUTTONS */
+.call-float{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:#0b5ed7;
+  color:#fff;
+  font-size:26px;
+  padding:14px 16px;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  z-index:1000;
+}
+
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  font-size:26px;
+  padding:14px 16px;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  z-index:1000;
+}
+
+.call-float:hover,
+.whatsapp-float:hover{
+  transform:scale(1.1);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:34px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <img src="logo.png" alt="Sadhya Sri Communications Logo">
-    <h1>SADHYA SRI COMMUNICATIONS</h1>
-    <p>Online & Government Services</p>
-  </div>
+<div class="wrapper">
 
-  <div class="container">
+  <div class="hero">
 
-    <!-- SERVICES -->
-    <div class="card">
-      <h2>Our Services</h2>
-      <ul>
+    <!-- LEFT -->
+    <div class="hero-left">
+      <img src="logo.png" alt="Logo">
+
+      <h1>
+        Online & Government<br>
+        <span>Service Solutions</span>
+      </h1>
+
+      <p>Trusted digital & documentation services under one roof.</p>
+
+      <ul class="services-list">
         <li>MeeSeva Services</li>
         <li>EPFO Services</li>
         <li>UDYAM Registration</li>
-        <li>Job Applications (Online & Offline)</li>
-        <li>Government Scheme Applications</li>
-        <li>Money Transfer</li>
-        <li>Xerox (Color & B/W)</li>
-        <li>Lamination</li>
-        <li>PVC Card Printing</li>
+        <li>Job Applications</li>
+        <li>Xerox & PVC Card Printing</li>
       </ul>
+
+      <div class="btn-group">
+        <a href="#contact" class="btn btn-primary">Our Services</a>
+        <a href="tel:7093199527" class="btn btn-outline">Contact Us</a>
+      </div>
     </div>
 
-    <!-- CONTACT -->
-    <div class="card contact">
-      <h2>Contact Us</h2>
-      <p>📞 <strong>Mobile:</strong>
-        <a href="tel:7093199527">7093199527</a>,
-        <a href="tel:6300538312">6300538312</a>
-      </p>
-      <p>✉️ <strong>Email:</strong>
-        <a href="mailto:sadhyasricommunications@gmail.com">
-          sadhyasricommunications@gmail.com
-        </a>
-      </p>
-      <p>📍 <strong>Address:</strong><br>
-        1-007,<br>
-        Near Fish Market,<br>
-        Narayankhed, Telangana – 502286
-      </p>
-
-      <!-- MAP -->
-      <iframe
-        src="https://www.google.com/maps?q=Narayankhed+Near+Fish+Market&output=embed"
-        loading="lazy">
-      </iframe>
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <img src="hero.png" alt="Website Preview">
     </div>
 
   </div>
 
-  <!-- FLOATING BUTTONS -->
-  <a href="tel:7093199527" class="call-float" title="Call Now">📞</a>
-  <a href="https://wa.me/917093199527" class="whatsapp-float" target="_blank" title="WhatsApp Chat">💬</a>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 Sadhya Sri Communications | All Rights Reserved
+  <!-- CONTACT BAR -->
+  <div class="contact-bar" id="contact">
+    <div class="contact-item">
+      📞 <strong>Phone:</strong> 7093199527, 6300538312
+    </div>
+    <div class="contact-item">
+      📧 <strong>Email:</strong> sadhyasricommunications@gmail.com
+    </div>
+    <div class="contact-item">
+      📍 <strong>Narayankhed, Telangana</strong>
+    </div>
   </div>
+
+</div>
+
+<!-- FLOATING BUTTONS -->
+<a href="tel:7093199527" class="call-float">📞</a>
+<a href="https://wa.me/917093199527" class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
