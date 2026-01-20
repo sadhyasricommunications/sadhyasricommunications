@@ -5,7 +5,7 @@
 <title>Sadhya Sri Communications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- TOOL LIBRARIES -->
+<!-- TOOLS LIBRARIES -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
@@ -13,7 +13,7 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;}
-body{background:#f4f6fb;padding-top:50px;}
+body{background:#f4f6fb;padding-top:55px;}
 
 /* TOP BAR */
 .top-bar{
@@ -29,15 +29,34 @@ body{background:#f4f6fb;padding-top:50px;}
   display:flex;flex-wrap:wrap;
   padding:40px;background:#fff;
 }
-.hero-left{flex:1;min-width:280px;}
-.hero-left h1{font-size:38px;line-height:1.2;}
+.hero-left{
+  flex:1;min-width:280px;
+}
+.hero-left img{
+  max-width:140px;
+  margin-bottom:15px;
+}
+.hero-left h1{
+  font-size:36px;line-height:1.2;
+}
 .hero-left h1 span{color:#22b573;}
-.hero-left p{margin:15px 0;color:#555;font-size:17px;}
-.hero-right{flex:1;min-width:280px;text-align:center;font-size:80px;}
+.hero-left p{
+  margin:15px 0;
+  color:#555;font-size:17px;
+}
+.hero-right{
+  flex:1;min-width:280px;
+  text-align:center;
+  font-size:80px;
+}
 
 /* SECTION */
 .section{padding:40px;}
-.section h2{text-align:center;color:#1e3c72;margin-bottom:30px;}
+.section h2{
+  text-align:center;
+  color:#1e3c72;
+  margin-bottom:30px;
+}
 
 /* SERVICES */
 .services-grid{
@@ -122,16 +141,22 @@ body{background:#f4f6fb;padding-top:50px;}
 <div class="top-bar">
 📞 <a href="tel:7093199527">7093199527</a> |
 <a href="tel:6300538312">6300538312</a>
-💬 <a href="https://wa.me/917093199527?text=Hello%20Sadhya%20Sri%20Communications,%20I%20need%20your%20services"
+💬 <a href="https://wa.me/917093199527?text=Hello%20Sadhya%20Sri%20Communications"
 target="_blank">WhatsApp</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
+
+    <!-- SHOP LOGO (FIXED) -->
+    <img src="logo.png" alt="Sadhya Sri Communications Logo">
+
     <h1>SADHYA <span>SRI</span><br>COMMUNICATIONS</h1>
     <p>Government & Online Digital Services Under One Roof</p>
+
   </div>
+
   <div class="hero-right">💻</div>
 </div>
 
