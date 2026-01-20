@@ -5,6 +5,9 @@
 <title>Sadhya Sri Communications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- GOOGLE FONTS (MATCH LOGO STYLE) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+
 <!-- LIBRARIES -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
@@ -33,16 +36,37 @@ body{background:#f4f6fb;}
   flex:1;
   text-align:center;
 }
-.header-center h1{
-  font-size:38px;
+
+/* BRAND NAME */
+.brand-name{line-height:1;}
+.brand-main{
+  font-family:'Poppins',sans-serif;
+  font-size:42px;
   font-weight:700;
+  letter-spacing:2px;
+  color:#6a5cff;
 }
-.header-center h1 span{color:#22b573;}
+.brand-sri{
+  font-family:'Poppins',sans-serif;
+  font-size:42px;
+  font-weight:700;
+  margin-left:8px;
+  color:#1dbf73;
+}
+.brand-script{
+  display:block;
+  font-family:'Pacifico',cursive;
+  font-size:26px;
+  color:#fff;
+  margin-top:5px;
+}
+
 .header-center p{
-  margin-top:6px;
+  margin-top:8px;
   font-size:15px;
   opacity:0.9;
 }
+
 .header-right{
   text-align:right;
   font-size:15px;
@@ -142,7 +166,8 @@ body{background:#f4f6fb;}
 @media(max-width:768px){
   .main-header{flex-direction:column;text-align:center;}
   .header-right{text-align:center;margin-top:10px;}
-  .header-center h1{font-size:28px;}
+  .brand-main,.brand-sri{font-size:30px;}
+  .brand-script{font-size:20px;}
 }
 </style>
 </head>
@@ -156,7 +181,11 @@ body{background:#f4f6fb;}
   </div>
 
   <div class="header-center">
-    <h1>SADHYA <span>SRI</span> COMMUNICATIONS</h1>
+    <h1 class="brand-name">
+      <span class="brand-main">SADHYA</span>
+      <span class="brand-sri">SRI</span>
+      <span class="brand-script">communications</span>
+    </h1>
     <p>Government & Online Digital Services Under One Roof</p>
   </div>
 
@@ -205,32 +234,6 @@ body{background:#f4f6fb;}
 <iframe id="notifyFrame" src="https://www.manadomakonda.in/"></iframe>
 </div>
 
-<!-- ONLINE TOOLS -->
-<div class="section">
-<h2>Online Tools</h2>
-<div class="tools-grid">
-
-<div class="tool">
-<h3>JPG Crop</h3>
-<input type="file" id="cropInput" accept="image/*"><br><br>
-<button onclick="cropImage()">Crop & Download</button>
-</div>
-
-<div class="tool">
-<h3>JPG to PDF</h3>
-<input type="file" id="jpgPdf" accept="image/*"><br><br>
-<button onclick="jpgToPdf()">Convert</button>
-</div>
-
-<div class="tool">
-<h3>PDF Merge</h3>
-<input type="file" id="pdfMerge" multiple accept="application/pdf"><br><br>
-<button onclick="mergePdf()">Merge</button>
-</div>
-
-</div>
-</div>
-
 <!-- MAP -->
 <div class="section map">
 <h2>Our Location</h2>
@@ -253,54 +256,6 @@ function loadNotify(type){
   const f=document.getElementById("notifyFrame");
   if(type==="mana") f.src="https://www.manadomakonda.in/";
   if(type==="freejob") f.src="https://www.freejobalert.com/#goog_rewarded";
-}
-
-let cropper;
-document.getElementById('cropInput').onchange=e=>{
-  const img=document.createElement('img');
-  img.src=URL.createObjectURL(e.target.files[0]);
-  document.querySelector('.tool').appendChild(img);
-  cropper=new Cropper(img,{viewMode:1});
-};
-
-function cropImage(){
-  if(!cropper) return alert("Select image first");
-  const canvas=cropper.getCroppedCanvas();
-  const a=document.createElement('a');
-  a.href=canvas.toDataURL();
-  a.download="cropped.jpg";
-  a.click();
-}
-
-function jpgToPdf(){
-  const {jsPDF}=window.jspdf;
-  const f=document.getElementById('jpgPdf').files[0];
-  if(!f) return alert("Select image");
-  const r=new FileReader();
-  r.onload=e=>{
-    const pdf=new jsPDF();
-    pdf.addImage(e.target.result,'JPEG',10,10,180,160);
-    pdf.save("image.pdf");
-  };
-  r.readAsDataURL(f);
-}
-
-async function mergePdf(){
-  const files=document.getElementById('pdfMerge').files;
-  if(files.length<2) return alert("Select 2 PDFs");
-  const merged=await PDFLib.PDFDocument.create();
-  for(const f of files){
-    const b=await f.arrayBuffer();
-    const p=await PDFLib.PDFDocument.load(b);
-    const pages=await merged.copyPages(p,p.getPageIndices());
-    pages.forEach(pg=>merged.addPage(pg));
-  }
-  const bytes=await merged.save();
-  const blob=new Blob([bytes],{type:"application/pdf"});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download="merged.pdf";
-  a.click();
 }
 </script>
 
