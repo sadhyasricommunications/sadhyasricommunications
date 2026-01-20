@@ -6,88 +6,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:'Segoe UI', Arial, sans-serif;
-}
-
-body{
-  background:#f4f6fb;
-  padding-top:50px;
-}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;}
+body{background:#f4f6fb;padding-top:50px;}
 
 /* TOP BAR */
 .top-bar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:#1e3c72;
-  color:#fff;
-  text-align:center;
-  padding:10px;
-  font-size:15px;
-  z-index:2000;
+  position:fixed;top:0;left:0;width:100%;
+  background:#1e3c72;color:#fff;
+  text-align:center;padding:10px;
+  font-size:15px;z-index:2000;
 }
-.top-bar a{
-  color:#fff;
-  font-weight:600;
-  text-decoration:none;
-  margin:0 6px;
-}
+.top-bar a{color:#fff;font-weight:600;text-decoration:none;margin:0 6px;}
 
 /* HERO */
 .hero{
-  display:flex;
-  flex-wrap:wrap;
-  padding:40px;
-  background:#fff;
+  display:flex;flex-wrap:wrap;
+  padding:40px;background:#fff;
 }
-.hero-left{
-  flex:1;
-  min-width:280px;
-}
-.hero-left h1{
-  font-size:42px;
-  line-height:1.2;
-}
-.hero-left h1 span{
-  color:#22b573;
-}
-.hero-left p{
-  margin:15px 0;
-  color:#555;
-  font-size:17px;
-}
-.hero-right{
-  flex:1;
-  min-width:280px;
-  text-align:center;
-  font-size:120px;
-}
+.hero-left{flex:1;min-width:280px;}
+.hero-left h1{font-size:38px;line-height:1.2;}
+.hero-left h1 span{color:#22b573;}
+.hero-left p{margin:15px 0;color:#555;font-size:17px;}
+.hero-right{flex:1;min-width:280px;text-align:center;font-size:90px;}
 
-/* SECTIONS */
-.section{
-  padding:40px;
-}
+/* SECTION */
+.section{padding:40px;}
 .section h2{
-  color:#1e3c72;
-  margin-bottom:25px;
   text-align:center;
+  color:#1e3c72;
+  margin-bottom:30px;
 }
 
 /* SERVICES */
 .services-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:25px;
 }
-
 .service-card{
   background:#fff;
-  border-radius:25px;
+  border-radius:20px;
   padding:25px 20px;
   text-align:center;
   text-decoration:none;
@@ -95,27 +53,39 @@ body{
   box-shadow:0 10px 25px rgba(0,0,0,0.12);
   transition:0.3s;
 }
-.service-card:hover{
-  transform:translateY(-10px);
+.service-card:hover{transform:translateY(-10px);}
+.service-card img{
+  width:120px;
+  max-height:80px;
+  object-fit:contain;
+  margin-bottom:15px;
 }
-.service-card .icon{
-  font-size:48px;
-  margin-bottom:10px;
-}
-.service-card h3{
-  margin:10px 0;
-  font-size:18px;
-}
-.service-card p{
-  font-size:14px;
-  line-height:1.6;
-}
+.service-card h3{margin:10px 0;font-size:18px;}
+.service-card p{font-size:14px;line-height:1.6;color:#333;}
 
-/* COLORS */
-.aadhaar{background:linear-gradient(#fff1f1,#ffdada);}
-.epfo{background:linear-gradient(#f1f5ff,#dde5ff);}
-.udyam{background:linear-gradient(#f1fff7,#dbf7ea);}
-.online{background:linear-gradient(#f7f7ff,#e3e3ff);}
+/* TOOLS */
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+.tool{
+  background:#fff;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  text-align:center;
+}
+.tool h3{color:#1e3c72;margin-bottom:10px;}
+.tool p{font-size:14px;color:#555;}
+
+/* MAP */
+.map iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:15px;
+}
 
 /* FOOTER */
 .footer{
@@ -125,118 +95,116 @@ body{
   padding:15px;
   font-size:14px;
 }
-.footer a{
-  color:#fff;
-  font-weight:600;
-  text-decoration:none;
-}
+.footer a{color:#fff;font-weight:600;text-decoration:none;}
 
-/* FLOATING BUTTONS */
-.call-float,
-.whatsapp-float{
-  position:fixed;
-  right:20px;
-  padding:14px 16px;
-  border-radius:50%;
-  font-size:24px;
-  color:#fff;
-  text-decoration:none;
-  z-index:1000;
+/* FLOATING */
+.call-float,.whatsapp-float{
+  position:fixed;right:20px;
+  padding:14px 16px;border-radius:50%;
+  font-size:24px;color:#fff;
+  text-decoration:none;z-index:1000;
 }
-.call-float{
-  bottom:90px;
-  background:#0b5ed7;
-}
-.whatsapp-float{
-  bottom:20px;
-  background:#25d366;
-}
-.call-float:hover,
-.whatsapp-float:hover{
-  transform:scale(1.1);
-}
+.call-float{bottom:90px;background:#0b5ed7;}
+.whatsapp-float{bottom:20px;background:#25d366;}
+.call-float:hover,.whatsapp-float:hover{transform:scale(1.1);}
 
-/* MOBILE */
 @media(max-width:768px){
-  .hero-left h1{font-size:32px;}
-  .hero-right{font-size:80px;}
+  .hero-left h1{font-size:30px;}
+  .hero-right{font-size:60px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP CONTACT BAR -->
+<!-- TOP BAR -->
 <div class="top-bar">
-  📞 <a href="tel:7093199527">7093199527</a> |
-  <a href="tel:6300538312">6300538312</a>
-  💬 <a href="https://wa.me/917093199527?text=Hello%20Sadhya%20Sri%20Communications,%20I%20need%20your%20services"
-       target="_blank">WhatsApp</a>
+📞 <a href="tel:7093199527">7093199527</a> |
+<a href="tel:6300538312">6300538312</a>
+💬 <a href="https://wa.me/917093199527?text=Hello%20Sadhya%20Sri%20Communications,%20I%20need%20your%20services"
+target="_blank">WhatsApp</a>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-left">
     <h1>SADHYA <span>SRI</span><br>COMMUNICATIONS</h1>
     <p>Government & Online Digital Services Under One Roof</p>
   </div>
-  <div class="hero-right">
-    💻
-  </div>
+  <div class="hero-right">💻</div>
 </div>
 
 <!-- SERVICES -->
 <div class="section">
-  <h2>Our Services</h2>
+<h2>Our Services</h2>
+<div class="services-grid">
 
-  <div class="services-grid">
+<a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="service-card">
+<img src="aadhaar.png">
+<h3>Aadhaar Services</h3>
+<p>Address Update<br>Mobile Number Link<br>Corrections</p>
+</a>
 
-    <a href="https://myaadhaar.uidai.gov.in/en_IN"
-       target="_blank"
-       class="service-card aadhaar">
-      <div class="icon">🆔</div>
-      <h3>Aadhaar Services</h3>
-      <p>Address Update<br>Mobile Link<br>Corrections</p>
-    </a>
+<a href="https://www.epfindia.gov.in" target="_blank" class="service-card">
+<img src="epfo.png">
+<h3>EPFO Services</h3>
+<p>PF Withdrawal<br>Nominee Update<br>Corrections</p>
+</a>
 
-    <a href="https://www.epfindia.gov.in"
-       target="_blank"
-       class="service-card epfo">
-      <div class="icon">🏦</div>
-      <h3>EPFO Services</h3>
-      <p>PF Withdrawal<br>Nominee Update<br>Corrections</p>
-    </a>
+<a href="https://udyamregistration.gov.in" target="_blank" class="service-card">
+<img src="udyam.png">
+<h3>UDYAM Registration</h3>
+<p>New Registration<br>Certificate Download</p>
+</a>
 
-    <a href="https://udyamregistration.gov.in"
-       target="_blank"
-       class="service-card udyam">
-      <div class="icon">🏭</div>
-      <h3>UDYAM Registration</h3>
-      <p>New Registration<br>Certificate Download</p>
-    </a>
+</div>
+</div>
 
-    <a href="#"
-       class="service-card online">
-      <div class="icon">💻</div>
-      <h3>Online Services</h3>
-      <p>Job Applications<br>All Online Forms</p>
-    </a>
+<!-- ONLINE TOOLS -->
+<div class="section">
+<h2>Online Tools</h2>
+<div class="tools-grid">
 
-  </div>
+<div class="tool">
+<h3>JPG Crop Tool</h3>
+<p>Crop passport & document photos</p>
+</div>
+
+<div class="tool">
+<h3>JPG to PDF</h3>
+<p>Convert image files into PDF</p>
+</div>
+
+<div class="tool">
+<h3>PDF Merge</h3>
+<p>Combine multiple PDFs into one</p>
+</div>
+
+<div class="tool">
+<h3>PDF to Word</h3>
+<p>Convert PDF text to Word format</p>
+</div>
+
+</div>
+</div>
+
+<!-- MAP -->
+<div class="section map">
+<h2>Our Location</h2>
+<iframe src="https://www.google.com/maps?q=Narayankhed%20Telangana&output=embed"></iframe>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  📞 <a href="tel:7093199527">7093199527</a> |
-  <a href="tel:6300538312">6300538312</a> |
-  ✉️ sadhyasricommunications@gmail.com<br>
-  © 2026 Sadhya Sri Communications | Narayankhed
+📞 <a href="tel:7093199527">7093199527</a> |
+<a href="tel:6300538312">6300538312</a> |
+✉️ sadhyasricommunications@gmail.com<br>
+© 2026 Sadhya Sri Communications | Narayankhed
 </div>
 
-<!-- FLOATING BUTTONS -->
+<!-- FLOATING -->
 <a href="tel:7093199527" class="call-float">📞</a>
-<a href="https://wa.me/917093199527?text=Hello%20Sadhya%20Sri%20Communications"
-   class="whatsapp-float" target="_blank">💬</a>
+<a href="https://wa.me/917093199527" class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
