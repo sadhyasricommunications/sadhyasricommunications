@@ -5,35 +5,53 @@
 <title>Sadhya Sri Communications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- TOOLS LIBRARIES -->
+<!-- LIBRARIES -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"/>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;}
-body{background:#f4f6fb;padding-top:55px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+body{background:#f4f6fb;}
 
-/* TOP BAR */
-.top-bar{
-  position:fixed;top:0;left:0;width:100%;
-  background:#1e3c72;color:#fff;
-  text-align:center;padding:10px;
-  font-size:15px;z-index:2000;
-}
-.top-bar a{color:#fff;font-weight:600;text-decoration:none;margin:0 6px;}
-
-/* HERO */
-.hero{
-  display:flex;flex-wrap:wrap;
+/* HEADER */
+.main-header{
+  width:100%;
+  background:#1e3c72;
+  color:#fff;
+  display:flex;
   align-items:center;
-  padding:40px;background:#fff;
+  justify-content:space-between;
+  padding:20px 30px;
+  flex-wrap:wrap;
 }
-.hero-left img{max-width:140px;margin-bottom:15px;}
-.hero-left h1{font-size:36px;line-height:1.2;}
-.hero-left h1 span{color:#22b573;}
-.hero-left p{margin:15px 0;color:#555;font-size:17px;}
+.header-left img{
+  max-height:130px;
+}
+.header-center{
+  flex:1;
+  text-align:center;
+}
+.header-center h1{
+  font-size:38px;
+  font-weight:700;
+}
+.header-center h1 span{color:#22b573;}
+.header-center p{
+  margin-top:6px;
+  font-size:15px;
+  opacity:0.9;
+}
+.header-right{
+  text-align:right;
+  font-size:15px;
+}
+.header-right a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
 
 /* SECTION */
 .section{padding:40px;}
@@ -48,7 +66,7 @@ body{background:#f4f6fb;padding-top:55px;}
 .service-card{
   background:#fff;
   border-radius:20px;
-  padding:25px 20px;
+  padding:25px;
   text-align:center;
   text-decoration:none;
   color:#000;
@@ -58,24 +76,26 @@ body{background:#f4f6fb;padding-top:55px;}
 .service-card:hover{transform:translateY(-10px);}
 .service-card img{
   width:120px;
-  max-height:80px;
+  height:80px;
   object-fit:contain;
   margin-bottom:15px;
 }
-.service-card h3{margin:10px 0;font-size:18px;}
-.service-card p{font-size:14px;line-height:1.6;color:#333;}
+.service-card h3{margin-bottom:8px;}
+.service-card p{font-size:14px;color:#444;line-height:1.6;}
 
 /* NOTIFICATIONS */
 .notify-buttons{text-align:center;margin-bottom:15px;}
 .notify-buttons button{
-  background:#1e3c72;color:#fff;border:none;
-  padding:10px 18px;margin:5px;
-  border-radius:25px;cursor:pointer;
+  background:#1e3c72;color:#fff;
+  border:none;padding:10px 18px;
+  margin:5px;border-radius:25px;
+  cursor:pointer;
 }
 .notify-buttons button:hover{background:#22b573;}
 .notifications iframe{
-  width:100%;height:650px;border:none;
-  border-radius:15px;background:#fff;
+  width:100%;height:650px;
+  border:none;border-radius:15px;
+  background:#fff;
 }
 
 /* TOOLS */
@@ -85,16 +105,16 @@ body{background:#f4f6fb;padding-top:55px;}
   gap:25px;
 }
 .tool{
-  background:#fff;padding:25px;
+  background:#fff;
+  padding:25px;
   border-radius:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
   text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
-.tool input{width:100%;margin:10px 0;}
 .tool button{
-  background:#22b573;border:none;color:#fff;
-  padding:10px 15px;border-radius:8px;
-  cursor:pointer;
+  background:#22b573;color:#fff;
+  border:none;padding:10px 15px;
+  border-radius:8px;cursor:pointer;
 }
 
 /* MAP */
@@ -102,41 +122,50 @@ body{background:#f4f6fb;padding-top:55px;}
 
 /* FOOTER */
 .footer{
-  background:#1e3c72;color:#fff;
-  text-align:center;padding:15px;font-size:14px;
+  background:#1e3c72;
+  color:#fff;
+  text-align:center;
+  padding:15px;
 }
-.footer a{color:#fff;font-weight:600;text-decoration:none;}
+.footer a{color:#fff;text-decoration:none;font-weight:600;}
 
 /* FLOATING */
 .call-float,.whatsapp-float{
   position:fixed;right:20px;
   padding:14px 16px;border-radius:50%;
   font-size:24px;color:#fff;
-  text-decoration:none;z-index:1000;
+  z-index:1000;text-decoration:none;
 }
 .call-float{bottom:90px;background:#0b5ed7;}
 .whatsapp-float{bottom:20px;background:#25d366;}
-.call-float:hover,.whatsapp-float:hover{transform:scale(1.1);}
+
+@media(max-width:768px){
+  .main-header{flex-direction:column;text-align:center;}
+  .header-right{text-align:center;margin-top:10px;}
+  .header-center h1{font-size:28px;}
+}
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-📞 <a href="tel:7093199527">7093199527</a> |
-<a href="tel:6300538312">6300538312</a>
-💬 <a href="https://wa.me/917093199527" target="_blank">WhatsApp</a>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-left">
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-left">
     <img src="logo.png" alt="Shop Logo">
-    <h1>SADHYA <span>SRI</span><br>COMMUNICATIONS</h1>
+  </div>
+
+  <div class="header-center">
+    <h1>SADHYA <span>SRI</span> COMMUNICATIONS</h1>
     <p>Government & Online Digital Services Under One Roof</p>
   </div>
-</div>
+
+  <div class="header-right">
+    📞 <a href="tel:7093199527">7093199527</a><br>
+    📞 <a href="tel:6300538312">6300538312</a><br>
+    💬 <a href="https://wa.me/917093199527" target="_blank">WhatsApp</a>
+  </div>
+</header>
 
 <!-- SERVICES -->
 <div class="section">
@@ -144,17 +173,20 @@ body{background:#f4f6fb;padding-top:55px;}
 <div class="services-grid">
 
 <a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="service-card">
-<img src="aadhaar.png"><h3>Aadhaar Services</h3>
+<img src="aadhaar.png">
+<h3>Aadhaar Services</h3>
 <p>Address Update<br>Mobile Link<br>Corrections</p>
 </a>
 
 <a href="https://www.epfindia.gov.in" target="_blank" class="service-card">
-<img src="epfo.png"><h3>EPFO Services</h3>
+<img src="epfo.png">
+<h3>EPFO Services</h3>
 <p>PF Withdrawal<br>Nominee Update<br>Corrections</p>
 </a>
 
 <a href="https://udyamregistration.gov.in" target="_blank" class="service-card">
-<img src="udyam.png"><h3>UDYAM Registration</h3>
+<img src="udyam.png">
+<h3>UDYAM Registration</h3>
 <p>New Registration<br>Certificate Download</p>
 </a>
 
@@ -179,22 +211,21 @@ body{background:#f4f6fb;padding-top:55px;}
 <div class="tools-grid">
 
 <div class="tool">
-<h3>JPG Image Crop Tool</h3>
-<input type="file" id="cropInput" accept="image/*">
-<img id="cropImage" style="max-width:100%;margin-top:10px;">
+<h3>JPG Crop</h3>
+<input type="file" id="cropInput" accept="image/*"><br><br>
 <button onclick="cropImage()">Crop & Download</button>
 </div>
 
 <div class="tool">
 <h3>JPG to PDF</h3>
-<input type="file" id="jpgPdf" accept="image/*">
-<button onclick="jpgToPdf()">Convert to PDF</button>
+<input type="file" id="jpgPdf" accept="image/*"><br><br>
+<button onclick="jpgToPdf()">Convert</button>
 </div>
 
 <div class="tool">
 <h3>PDF Merge</h3>
-<input type="file" id="pdfMerge" multiple accept="application/pdf">
-<button onclick="mergePdf()">Merge PDFs</button>
+<input type="file" id="pdfMerge" multiple accept="application/pdf"><br><br>
+<button onclick="mergePdf()">Merge</button>
 </div>
 
 </div>
@@ -209,8 +240,7 @@ body{background:#f4f6fb;padding-top:55px;}
 <!-- FOOTER -->
 <div class="footer">
 📞 <a href="tel:7093199527">7093199527</a> |
-<a href="tel:6300538312">6300538312</a> |
-✉️ sadhyasricommunications@gmail.com<br>
+<a href="tel:6300538312">6300538312</a><br>
 © 2026 Sadhya Sri Communications
 </div>
 
@@ -220,56 +250,57 @@ body{background:#f4f6fb;padding-top:55px;}
 
 <script>
 function loadNotify(type){
-  const frame=document.getElementById("notifyFrame");
-  if(type==="mana") frame.src="https://www.manadomakonda.in/";
-  if(type==="freejob") frame.src="https://www.freejobalert.com/#goog_rewarded";
+  const f=document.getElementById("notifyFrame");
+  if(type==="mana") f.src="https://www.manadomakonda.in/";
+  if(type==="freejob") f.src="https://www.freejobalert.com/#goog_rewarded";
 }
 
 let cropper;
 document.getElementById('cropInput').onchange=e=>{
-  const img=document.getElementById('cropImage');
+  const img=document.createElement('img');
   img.src=URL.createObjectURL(e.target.files[0]);
+  document.querySelector('.tool').appendChild(img);
   cropper=new Cropper(img,{viewMode:1});
 };
 
 function cropImage(){
   if(!cropper) return alert("Select image first");
   const canvas=cropper.getCroppedCanvas();
-  const link=document.createElement('a');
-  link.download="cropped.jpg";
-  link.href=canvas.toDataURL();
-  link.click();
+  const a=document.createElement('a');
+  a.href=canvas.toDataURL();
+  a.download="cropped.jpg";
+  a.click();
 }
 
 function jpgToPdf(){
   const {jsPDF}=window.jspdf;
-  const file=document.getElementById('jpgPdf').files[0];
-  if(!file) return alert("Select image");
-  const reader=new FileReader();
-  reader.onload=e=>{
+  const f=document.getElementById('jpgPdf').files[0];
+  if(!f) return alert("Select image");
+  const r=new FileReader();
+  r.onload=e=>{
     const pdf=new jsPDF();
     pdf.addImage(e.target.result,'JPEG',10,10,180,160);
     pdf.save("image.pdf");
   };
-  reader.readAsDataURL(file);
+  r.readAsDataURL(f);
 }
 
 async function mergePdf(){
   const files=document.getElementById('pdfMerge').files;
-  if(files.length<2) return alert("Select at least 2 PDFs");
+  if(files.length<2) return alert("Select 2 PDFs");
   const merged=await PDFLib.PDFDocument.create();
   for(const f of files){
-    const bytes=await f.arrayBuffer();
-    const pdf=await PDFLib.PDFDocument.load(bytes);
-    const pages=await merged.copyPages(pdf,pdf.getPageIndices());
-    pages.forEach(p=>merged.addPage(p));
+    const b=await f.arrayBuffer();
+    const p=await PDFLib.PDFDocument.load(b);
+    const pages=await merged.copyPages(p,p.getPageIndices());
+    pages.forEach(pg=>merged.addPage(pg));
   }
-  const pdfBytes=await merged.save();
-  const blob=new Blob([pdfBytes],{type:"application/pdf"});
-  const link=document.createElement('a');
-  link.href=URL.createObjectURL(blob);
-  link.download="merged.pdf";
-  link.click();
+  const bytes=await merged.save();
+  const blob=new Blob([bytes],{type:"application/pdf"});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download="merged.pdf";
+  a.click();
 }
 </script>
 
