@@ -27,11 +27,10 @@ body{background:#f4f6fb;padding-top:55px;}
 /* HERO */
 .hero{
   display:flex;flex-wrap:wrap;
+  align-items:center;
   padding:40px;background:#fff;
 }
-.hero-left{
-  flex:1;min-width:280px;
-}
+.hero-left{flex:1;min-width:280px;}
 .hero-left img{
   max-width:140px;
   margin-bottom:15px;
@@ -43,11 +42,6 @@ body{background:#f4f6fb;padding-top:55px;}
 .hero-left p{
   margin:15px 0;
   color:#555;font-size:17px;
-}
-.hero-right{
-  flex:1;min-width:280px;
-  text-align:center;
-  font-size:80px;
 }
 
 /* SECTION */
@@ -105,6 +99,14 @@ body{background:#f4f6fb;padding-top:55px;}
   cursor:pointer;
 }
 
+/* NOTIFICATIONS */
+.notifications iframe{
+  width:100%;
+  height:650px;
+  border:none;
+  border-radius:15px;
+}
+
 /* MAP */
 .map iframe{
   width:100%;height:300px;border:0;border-radius:15px;
@@ -130,7 +132,6 @@ body{background:#f4f6fb;padding-top:55px;}
 
 @media(max-width:768px){
   .hero-left h1{font-size:30px;}
-  .hero-right{font-size:60px;}
 }
 </style>
 </head>
@@ -145,19 +146,17 @@ body{background:#f4f6fb;padding-top:55px;}
 target="_blank">WhatsApp</a>
 </div>
 
-<!-- HERO -->
+<!-- HERO (SHOP LOGO ONLY – NO LAPTOP SYMBOL) -->
 <div class="hero">
   <div class="hero-left">
 
-    <!-- SHOP LOGO (FIXED) -->
+    <!-- SHOP LOGO -->
     <img src="logo.png" alt="Sadhya Sri Communications Logo">
 
     <h1>SADHYA <span>SRI</span><br>COMMUNICATIONS</h1>
     <p>Government & Online Digital Services Under One Roof</p>
 
   </div>
-
-  <div class="hero-right">💻</div>
 </div>
 
 <!-- SERVICES -->
@@ -184,6 +183,12 @@ target="_blank">WhatsApp</a>
 </a>
 
 </div>
+</div>
+
+<!-- NOTIFICATIONS (EMBEDDED – NO REDIRECT) -->
+<div class="section notifications">
+<h2>Latest Notifications</h2>
+<iframe src="https://www.manadomakonda.in/"></iframe>
 </div>
 
 <!-- ONLINE TOOLS -->
