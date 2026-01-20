@@ -30,27 +30,14 @@ body{background:#f4f6fb;padding-top:55px;}
   align-items:center;
   padding:40px;background:#fff;
 }
-.hero-left{flex:1;min-width:280px;}
-.hero-left img{
-  max-width:140px;
-  margin-bottom:15px;
-}
-.hero-left h1{
-  font-size:36px;line-height:1.2;
-}
+.hero-left img{max-width:140px;margin-bottom:15px;}
+.hero-left h1{font-size:36px;line-height:1.2;}
 .hero-left h1 span{color:#22b573;}
-.hero-left p{
-  margin:15px 0;
-  color:#555;font-size:17px;
-}
+.hero-left p{margin:15px 0;color:#555;font-size:17px;}
 
 /* SECTION */
 .section{padding:40px;}
-.section h2{
-  text-align:center;
-  color:#1e3c72;
-  margin-bottom:30px;
-}
+.section h2{text-align:center;color:#1e3c72;margin-bottom:30px;}
 
 /* SERVICES */
 .services-grid{
@@ -78,6 +65,19 @@ body{background:#f4f6fb;padding-top:55px;}
 .service-card h3{margin:10px 0;font-size:18px;}
 .service-card p{font-size:14px;line-height:1.6;color:#333;}
 
+/* NOTIFICATIONS */
+.notify-buttons{text-align:center;margin-bottom:15px;}
+.notify-buttons button{
+  background:#1e3c72;color:#fff;border:none;
+  padding:10px 18px;margin:5px;
+  border-radius:25px;cursor:pointer;
+}
+.notify-buttons button:hover{background:#22b573;}
+.notifications iframe{
+  width:100%;height:650px;border:none;
+  border-radius:15px;background:#fff;
+}
+
 /* TOOLS */
 .tools-grid{
   display:grid;
@@ -85,13 +85,11 @@ body{background:#f4f6fb;padding-top:55px;}
   gap:25px;
 }
 .tool{
-  background:#fff;
-  padding:25px;
+  background:#fff;padding:25px;
   border-radius:20px;
   box-shadow:0 8px 20px rgba(0,0,0,0.1);
   text-align:center;
 }
-.tool h3{color:#1e3c72;margin-bottom:10px;}
 .tool input{width:100%;margin:10px 0;}
 .tool button{
   background:#22b573;border:none;color:#fff;
@@ -99,18 +97,8 @@ body{background:#f4f6fb;padding-top:55px;}
   cursor:pointer;
 }
 
-/* NOTIFICATIONS */
-.notifications iframe{
-  width:100%;
-  height:650px;
-  border:none;
-  border-radius:15px;
-}
-
 /* MAP */
-.map iframe{
-  width:100%;height:300px;border:0;border-radius:15px;
-}
+.map iframe{width:100%;height:300px;border:0;border-radius:15px;}
 
 /* FOOTER */
 .footer{
@@ -129,10 +117,6 @@ body{background:#f4f6fb;padding-top:55px;}
 .call-float{bottom:90px;background:#0b5ed7;}
 .whatsapp-float{bottom:20px;background:#25d366;}
 .call-float:hover,.whatsapp-float:hover{transform:scale(1.1);}
-
-@media(max-width:768px){
-  .hero-left h1{font-size:30px;}
-}
 </style>
 </head>
 
@@ -142,20 +126,15 @@ body{background:#f4f6fb;padding-top:55px;}
 <div class="top-bar">
 📞 <a href="tel:7093199527">7093199527</a> |
 <a href="tel:6300538312">6300538312</a>
-💬 <a href="https://wa.me/917093199527?text=Hello%20Sadhya%20Sri%20Communications"
-target="_blank">WhatsApp</a>
+💬 <a href="https://wa.me/917093199527" target="_blank">WhatsApp</a>
 </div>
 
-<!-- HERO (SHOP LOGO ONLY – NO LAPTOP SYMBOL) -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-
-    <!-- SHOP LOGO -->
-    <img src="logo.png" alt="Sadhya Sri Communications Logo">
-
+    <img src="logo.png" alt="Shop Logo">
     <h1>SADHYA <span>SRI</span><br>COMMUNICATIONS</h1>
     <p>Government & Online Digital Services Under One Roof</p>
-
   </div>
 </div>
 
@@ -165,30 +144,33 @@ target="_blank">WhatsApp</a>
 <div class="services-grid">
 
 <a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="service-card">
-<img src="aadhaar.png">
-<h3>Aadhaar Services</h3>
+<img src="aadhaar.png"><h3>Aadhaar Services</h3>
 <p>Address Update<br>Mobile Link<br>Corrections</p>
 </a>
 
 <a href="https://www.epfindia.gov.in" target="_blank" class="service-card">
-<img src="epfo.png">
-<h3>EPFO Services</h3>
+<img src="epfo.png"><h3>EPFO Services</h3>
 <p>PF Withdrawal<br>Nominee Update<br>Corrections</p>
 </a>
 
 <a href="https://udyamregistration.gov.in" target="_blank" class="service-card">
-<img src="udyam.png">
-<h3>UDYAM Registration</h3>
+<img src="udyam.png"><h3>UDYAM Registration</h3>
 <p>New Registration<br>Certificate Download</p>
 </a>
 
 </div>
 </div>
 
-<!-- NOTIFICATIONS (EMBEDDED – NO REDIRECT) -->
+<!-- NOTIFICATIONS -->
 <div class="section notifications">
 <h2>Latest Notifications</h2>
-<iframe src="https://www.manadomakonda.in/"></iframe>
+
+<div class="notify-buttons">
+  <button onclick="loadNotify('mana')">Manadomakonda</button>
+  <button onclick="loadNotify('freejob')">Free Job Alert</button>
+</div>
+
+<iframe id="notifyFrame" src="https://www.manadomakonda.in/"></iframe>
 </div>
 
 <!-- ONLINE TOOLS -->
@@ -229,7 +211,7 @@ target="_blank">WhatsApp</a>
 📞 <a href="tel:7093199527">7093199527</a> |
 <a href="tel:6300538312">6300538312</a> |
 ✉️ sadhyasricommunications@gmail.com<br>
-© 2026 Sadhya Sri Communications | Narayankhed
+© 2026 Sadhya Sri Communications
 </div>
 
 <!-- FLOATING -->
@@ -237,51 +219,56 @@ target="_blank">WhatsApp</a>
 <a href="https://wa.me/917093199527" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
-let cropper;
+function loadNotify(type){
+  const frame=document.getElementById("notifyFrame");
+  if(type==="mana") frame.src="https://www.manadomakonda.in/";
+  if(type==="freejob") frame.src="https://www.freejobalert.com/#goog_rewarded";
+}
 
-document.getElementById('cropInput').onchange = e => {
-  const img = document.getElementById('cropImage');
-  img.src = URL.createObjectURL(e.target.files[0]);
-  cropper = new Cropper(img, { viewMode: 1 });
+let cropper;
+document.getElementById('cropInput').onchange=e=>{
+  const img=document.getElementById('cropImage');
+  img.src=URL.createObjectURL(e.target.files[0]);
+  cropper=new Cropper(img,{viewMode:1});
 };
 
 function cropImage(){
-  if(!cropper) return alert("Select an image first");
-  const canvas = cropper.getCroppedCanvas();
-  const link = document.createElement('a');
-  link.download = "cropped.jpg";
-  link.href = canvas.toDataURL();
+  if(!cropper) return alert("Select image first");
+  const canvas=cropper.getCroppedCanvas();
+  const link=document.createElement('a');
+  link.download="cropped.jpg";
+  link.href=canvas.toDataURL();
   link.click();
 }
 
 function jpgToPdf(){
-  const { jsPDF } = window.jspdf;
-  const file = document.getElementById('jpgPdf').files[0];
-  if(!file) return alert("Select an image");
-  const reader = new FileReader();
-  reader.onload = e => {
-    const pdf = new jsPDF();
-    pdf.addImage(e.target.result, 'JPEG', 10, 10, 180, 160);
+  const {jsPDF}=window.jspdf;
+  const file=document.getElementById('jpgPdf').files[0];
+  if(!file) return alert("Select image");
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const pdf=new jsPDF();
+    pdf.addImage(e.target.result,'JPEG',10,10,180,160);
     pdf.save("image.pdf");
   };
   reader.readAsDataURL(file);
 }
 
 async function mergePdf(){
-  const files = document.getElementById('pdfMerge').files;
-  if(files.length < 2) return alert("Select at least 2 PDFs");
-  const merged = await PDFLib.PDFDocument.create();
+  const files=document.getElementById('pdfMerge').files;
+  if(files.length<2) return alert("Select at least 2 PDFs");
+  const merged=await PDFLib.PDFDocument.create();
   for(const f of files){
-    const bytes = await f.arrayBuffer();
-    const pdf = await PDFLib.PDFDocument.load(bytes);
-    const pages = await merged.copyPages(pdf, pdf.getPageIndices());
-    pages.forEach(p => merged.addPage(p));
+    const bytes=await f.arrayBuffer();
+    const pdf=await PDFLib.PDFDocument.load(bytes);
+    const pages=await merged.copyPages(pdf,pdf.getPageIndices());
+    pages.forEach(p=>merged.addPage(p));
   }
-  const pdfBytes = await merged.save();
-  const blob = new Blob([pdfBytes], { type:"application/pdf" });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = "merged.pdf";
+  const pdfBytes=await merged.save();
+  const blob=new Blob([pdfBytes],{type:"application/pdf"});
+  const link=document.createElement('a');
+  link.href=URL.createObjectURL(blob);
+  link.download="merged.pdf";
   link.click();
 }
 </script>
