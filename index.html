@@ -5,88 +5,79 @@
 <title>Sadhya Sri Communications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE FONTS (MATCH LOGO STYLE) -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
-
-<!-- LIBRARIES -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"/>
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
-body{background:#f4f6fb;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
 
-/* HEADER */
+body{
+  background:#f4f6fb;
+}
+
+/* ================= HEADER ================= */
 .main-header{
   width:100%;
-  background:#1e3c72;
-  color:#fff;
+  background:#ffffff;      /* WHITE BACKGROUND */
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:20px 30px;
-  flex-wrap:wrap;
+  border-bottom:2px solid #eee;
 }
-.header-left img{
-  max-height:130px;
+
+.shop-logo{
+  height:90px;
 }
+
 .header-center{
   flex:1;
   text-align:center;
 }
 
-/* BRAND NAME */
-.brand-name{line-height:1;}
-.brand-main{
-  font-family:'Poppins',sans-serif;
-  font-size:42px;
-  font-weight:700;
-  letter-spacing:2px;
-  color:#6a5cff;
-}
-.brand-sri{
-  font-family:'Poppins',sans-serif;
-  font-size:42px;
-  font-weight:700;
-  margin-left:8px;
-  color:#1dbf73;
-}
-.brand-script{
-  display:block;
-  font-family:'Pacifico',cursive;
-  font-size:26px;
-  color:#fff;
-  margin-top:5px;
+.shop-name-img{
+  width:520px;             /* BIG SHOP NAME */
+  max-width:90%;
+  height:auto;
 }
 
-.header-center p{
+.tagline{
   margin-top:8px;
-  font-size:15px;
-  opacity:0.9;
+  font-size:14px;
+  color:#333;
 }
 
 .header-right{
   text-align:right;
-  font-size:15px;
+  font-size:14px;
 }
+
 .header-right a{
-  color:#fff;
+  color:#000;
   text-decoration:none;
   font-weight:600;
 }
 
-/* SECTION */
-.section{padding:40px;}
-.section h2{text-align:center;color:#1e3c72;margin-bottom:30px;}
+/* ================= SECTIONS ================= */
+.section{
+  padding:40px;
+}
 
-/* SERVICES */
+.section h2{
+  text-align:center;
+  color:#1e3c72;
+  margin-bottom:30px;
+}
+
+/* ================= SERVICES ================= */
 .services-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:25px;
 }
+
 .service-card{
   background:#fff;
   border-radius:20px;
@@ -97,96 +88,137 @@ body{background:#f4f6fb;}
   box-shadow:0 10px 25px rgba(0,0,0,0.12);
   transition:0.3s;
 }
-.service-card:hover{transform:translateY(-10px);}
+
+.service-card:hover{
+  transform:translateY(-10px);
+}
+
 .service-card img{
   width:120px;
   height:80px;
   object-fit:contain;
   margin-bottom:15px;
 }
-.service-card h3{margin-bottom:8px;}
-.service-card p{font-size:14px;color:#444;line-height:1.6;}
 
-/* NOTIFICATIONS */
-.notify-buttons{text-align:center;margin-bottom:15px;}
+.service-card h3{
+  margin-bottom:8px;
+}
+
+.service-card p{
+  font-size:14px;
+  color:#444;
+  line-height:1.6;
+}
+
+/* ================= NOTIFICATIONS ================= */
+.notify-buttons{
+  text-align:center;
+  margin-bottom:15px;
+}
+
 .notify-buttons button{
-  background:#1e3c72;color:#fff;
-  border:none;padding:10px 18px;
-  margin:5px;border-radius:25px;
+  background:#1e3c72;
+  color:#fff;
+  border:none;
+  padding:10px 18px;
+  margin:5px;
+  border-radius:25px;
   cursor:pointer;
 }
-.notify-buttons button:hover{background:#22b573;}
+
+.notify-buttons button:hover{
+  background:#22b573;
+}
+
 .notifications iframe{
-  width:100%;height:650px;
-  border:none;border-radius:15px;
+  width:100%;
+  height:650px;
+  border:none;
+  border-radius:15px;
   background:#fff;
 }
 
-/* TOOLS */
-.tools-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-}
-.tool{
-  background:#fff;
-  padding:25px;
-  border-radius:20px;
-  text-align:center;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-}
-.tool button{
-  background:#22b573;color:#fff;
-  border:none;padding:10px 15px;
-  border-radius:8px;cursor:pointer;
+/* ================= MAP ================= */
+.map iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:15px;
 }
 
-/* MAP */
-.map iframe{width:100%;height:300px;border:0;border-radius:15px;}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer{
   background:#1e3c72;
   color:#fff;
   text-align:center;
   padding:15px;
 }
-.footer a{color:#fff;text-decoration:none;font-weight:600;}
 
-/* FLOATING */
-.call-float,.whatsapp-float{
-  position:fixed;right:20px;
-  padding:14px 16px;border-radius:50%;
-  font-size:24px;color:#fff;
-  z-index:1000;text-decoration:none;
+.footer a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
 }
-.call-float{bottom:90px;background:#0b5ed7;}
-.whatsapp-float{bottom:20px;background:#25d366;}
 
+/* ================= FLOATING BUTTONS ================= */
+.call-float,
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  padding:14px 16px;
+  border-radius:50%;
+  font-size:24px;
+  color:#fff;
+  z-index:1000;
+  text-decoration:none;
+}
+
+.call-float{
+  bottom:90px;
+  background:#0b5ed7;
+}
+
+.whatsapp-float{
+  bottom:20px;
+  background:#25d366;
+}
+
+/* ================= MOBILE ================= */
 @media(max-width:768px){
-  .main-header{flex-direction:column;text-align:center;}
-  .header-right{text-align:center;margin-top:10px;}
-  .brand-main,.brand-sri{font-size:30px;}
-  .brand-script{font-size:20px;}
+  .main-header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .shop-logo{
+    height:70px;
+    margin-bottom:10px;
+  }
+
+  .shop-name-img{
+    width:320px;
+  }
+
+  .header-right{
+    text-align:center;
+    margin-top:10px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="main-header">
+
   <div class="header-left">
-    <img src="logo.png" alt="Shop Logo">
+    <img src="logo.png" alt="Shop Logo" class="shop-logo">
   </div>
 
   <div class="header-center">
-    <h1 class="brand-name">
-      <span class="brand-main">SADHYA</span>
-      <span class="brand-sri">SRI</span>
-      <span class="brand-script">communications</span>
-    </h1>
-    <p>Government & Online Digital Services Under One Roof</p>
+    <img src="shopname.png" alt="Sadhya Sri Communications" class="shop-name-img">
+    <p class="tagline">Government & Online Digital Services Under One Roof</p>
   </div>
 
   <div class="header-right">
@@ -194,35 +226,37 @@ body{background:#f4f6fb;}
     📞 <a href="tel:6300538312">6300538312</a><br>
     💬 <a href="https://wa.me/917093199527" target="_blank">WhatsApp</a>
   </div>
+
 </header>
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 <div class="section">
 <h2>Our Services</h2>
+
 <div class="services-grid">
 
 <a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="service-card">
-<img src="aadhaar.png">
-<h3>Aadhaar Services</h3>
-<p>Address Update<br>Mobile Link<br>Corrections</p>
+  <img src="aadhaar.png">
+  <h3>Aadhaar Services</h3>
+  <p>Address Update<br>Mobile Link<br>Corrections</p>
 </a>
 
 <a href="https://www.epfindia.gov.in" target="_blank" class="service-card">
-<img src="epfo.png">
-<h3>EPFO Services</h3>
-<p>PF Withdrawal<br>Nominee Update<br>Corrections</p>
+  <img src="epfo.png">
+  <h3>EPFO Services</h3>
+  <p>PF Withdrawal<br>Nominee Update<br>Corrections</p>
 </a>
 
 <a href="https://udyamregistration.gov.in" target="_blank" class="service-card">
-<img src="udyam.png">
-<h3>UDYAM Registration</h3>
-<p>New Registration<br>Certificate Download</p>
+  <img src="udyam.png">
+  <h3>UDYAM Registration</h3>
+  <p>New Registration<br>Certificate Download</p>
 </a>
 
 </div>
 </div>
 
-<!-- NOTIFICATIONS -->
+<!-- ================= NOTIFICATIONS ================= -->
 <div class="section notifications">
 <h2>Latest Notifications</h2>
 
@@ -234,28 +268,32 @@ body{background:#f4f6fb;}
 <iframe id="notifyFrame" src="https://www.manadomakonda.in/"></iframe>
 </div>
 
-<!-- MAP -->
+<!-- ================= MAP ================= -->
 <div class="section map">
 <h2>Our Location</h2>
 <iframe src="https://www.google.com/maps?q=Narayankhed%20Telangana&output=embed"></iframe>
 </div>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <div class="footer">
 📞 <a href="tel:7093199527">7093199527</a> |
 <a href="tel:6300538312">6300538312</a><br>
 © 2026 Sadhya Sri Communications
 </div>
 
-<!-- FLOATING -->
+<!-- ================= FLOATING ================= -->
 <a href="tel:7093199527" class="call-float">📞</a>
 <a href="https://wa.me/917093199527" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
 function loadNotify(type){
-  const f=document.getElementById("notifyFrame");
-  if(type==="mana") f.src="https://www.manadomakonda.in/";
-  if(type==="freejob") f.src="https://www.freejobalert.com/#goog_rewarded";
+  const f = document.getElementById("notifyFrame");
+  if(type === "mana"){
+    f.src = "https://www.manadomakonda.in/";
+  }
+  if(type === "freejob"){
+    f.src = "https://www.freejobalert.com/#goog_rewarded";
+  }
 }
 </script>
 
