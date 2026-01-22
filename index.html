@@ -6,22 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-  margin:0;
-  font-family:Segoe UI,Arial,sans-serif;
-  background:#f4f6fb;
-  color:#333;
-}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6fb;color:#333}
 
 /* TOP BAR */
-.top-bar{
-  background:#0b2c5d;
-  color:#fff;
-  padding:8px;
-  text-align:center;
-  font-size:14px;
-}
-.top-bar a{color:#fff;text-decoration:none;font-weight:600}
+.top-bar{background:#0b2c5d;color:#fff;padding:8px;text-align:center;font-size:14px}
 
 /* HEADER */
 .main-header{
@@ -34,40 +22,36 @@ body{
 }
 .shop-logo{height:80px}
 
-.header-center{
-  flex:1;
-  text-align:center;
-}
+.header-center{flex:1;text-align:center}
+.shop-name-img{max-width:520px;width:90%}
+.tagline{font-size:14px;color:#555;margin-top:6px}
 
-.shop-name-img{
-  max-width:520px;
-  width:90%;
-}
-
-.tagline{
-  font-size:14px;
-  color:#555;
+/* SHOP PHONES */
+.shop-phones{
   margin-top:6px;
+  font-size:14px;
+  font-weight:600;
+}
+.shop-phones a{
+  color:#0b2c5d;
+  text-decoration:none;
+  margin:0 8px;
 }
 
-/* OWNER IN HEADER */
-.header-owner{
-  text-align:center;
-  margin-left:15px;
-}
+/* OWNER */
+.header-owner{text-align:center;margin-left:15px}
 .header-owner img{
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #0b2c5d;
+  width:120px;
+  height:auto;
+  border-radius:8px;
+  object-fit:contain;
+  border:2px solid #0b2c5d;
 }
-.owner-name{
-  font-size:12px;
-  font-weight:600;
-  color:#0b2c5d;
-  margin-top:4px;
-}
+.owner-name{font-size:13px;font-weight:600;color:#0b2c5d;margin-top:6px}
+.owner-phone{font-size:13px;font-weight:600}
+.owner-phone a{color:#0b2c5d;text-decoration:none}
+.owner-whatsapp{margin-top:5px;font-size:13px;font-weight:600}
+.owner-whatsapp a{color:#25d366;text-decoration:none}
 
 /* NOTICE */
 .notice-bar{
@@ -77,21 +61,11 @@ body{
   padding:10px;
   font-weight:600;
 }
-.notice-bar a{
-  color:#c0392b;
-  margin-right:40px;
-  text-decoration:none;
-}
+.notice-bar a{color:#c0392b;margin-right:40px;text-decoration:none}
 
-/* SECTIONS */
-section{
-  padding:40px 20px;
-}
-h2{
-  text-align:center;
-  color:#0b2c5d;
-  margin-bottom:30px;
-}
+/* SECTION */
+section{padding:40px 20px}
+h2{text-align:center;color:#0b2c5d;margin-bottom:30px}
 
 /* GRID */
 .grid{
@@ -116,7 +90,7 @@ h2{
 .card:hover{transform:translateY(-5px)}
 .card img{height:80px;margin-bottom:15px}
 .card h3{color:#0b2c5d;margin:10px 0}
-.card p{font-size:14px;line-height:1.5}
+.card p{font-size:14px}
 
 /* MAP */
 .map-box{
@@ -128,12 +102,7 @@ h2{
 }
 
 /* FOOTER */
-footer{
-  background:#0b2c5d;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-}
+footer{background:#0b2c5d;color:#fff;text-align:center;padding:15px}
 
 /* WHATSAPP */
 .whatsapp{
@@ -164,30 +133,34 @@ footer{
 
 <body>
 
-<!-- TOP BAR -->
 <div class="top-bar">
-📞 <a href="tel:7093199527">7093199527</a> |
-<a href="tel:6300538312">6300538312</a>
+Welcome to Sadhya Sri Communications
 </div>
 
-<!-- HEADER -->
 <header class="main-header">
 
-  <img src="logo.png" class="shop-logo" alt="Shop Logo">
+  <img src="logo.png" class="shop-logo">
 
   <div class="header-center">
-    <img src="shopname.png" class="shop-name-img" alt="Sadhya Sri Communications">
+    <img src="shopname.png" class="shop-name-img">
     <div class="tagline">Government & Online Digital Services Under One Roof</div>
+    <div class="shop-phones">
+      📞 <a href="tel:7093199527">7093199527</a> |
+      <a href="tel:6300538312">6300538312</a>
+    </div>
   </div>
 
   <div class="header-owner">
-    <img src="owner.jpg" alt="Kishore Janmula">
+    <img src="owner.jpg">
     <div class="owner-name">Kishore Janmula</div>
+    <div class="owner-phone">📞 <a href="tel:7093199527">7093199527</a></div>
+    <div class="owner-whatsapp">
+      <a href="https://wa.me/917093199527" target="_blank">💬 WhatsApp</a>
+    </div>
   </div>
 
 </header>
 
-<!-- NOTICE -->
 <div class="notice-bar">
 <marquee scrollamount="6">
 🔔 <a href="https://www.manadomakonda.in/" target="_blank">Telangana Govt Notifications</a>
@@ -196,29 +169,29 @@ footer{
 </marquee>
 </div>
 
-<!-- SERVICES -->
+<!-- ALL SERVICES -->
 <section>
 <h2>Our Services</h2>
 <div class="grid">
 
-<a href="https://ts.meeseva.telangana.gov.in/" target="_blank" class="card"><img src="meeseva.png"><h3>MeeSeva Telangana</h3><p>Citizen Services</p></a>
-<a href="https://telanganaepass.cgg.gov.in/" target="_blank" class="card"><img src="epass.png"><h3>ePASS Telangana</h3><p>Scholarships</p></a>
-<a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="card"><img src="aadhaar.png"><h3>Aadhaar</h3><p>Update · Correction</p></a>
-<a href="https://unifiedportal-mem.epfindia.gov.in/" target="_blank" class="card"><img src="epfo.png"><h3>EPFO</h3><p>PF Services</p></a>
-<a href="https://udyamregistration.gov.in/" target="_blank" class="card"><img src="udyam.png"><h3>UDYAM</h3><p>MSME Registration</p></a>
+<a href="https://ts.meeseva.telangana.gov.in/" target="_blank" class="card"><img src="meeseva.png"><h3>MeeSeva Telangana</h3></a>
+<a href="https://telanganaepass.cgg.gov.in/" target="_blank" class="card"><img src="epass.png"><h3>ePASS Telangana</h3></a>
+<a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="card"><img src="aadhaar.png"><h3>Aadhaar</h3></a>
+<a href="https://unifiedportal-mem.epfindia.gov.in/" target="_blank" class="card"><img src="epfo.png"><h3>EPFO</h3></a>
+<a href="https://udyamregistration.gov.in/" target="_blank" class="card"><img src="udyam.png"><h3>UDYAM</h3></a>
 
-<a href="https://www.irctc.co.in/nget/train-search" target="_blank" class="card"><img src="irctc.png"><h3>IRCTC</h3><p>Train Booking</p></a>
-<a href="https://ttdevasthanams.ap.gov.in/home/dashboard" target="_blank" class="card"><img src="ttd.png"><h3>TTD</h3><p>Darshan & Seva</p></a>
+<a href="https://www.irctc.co.in/nget/train-search" target="_blank" class="card"><img src="irctc.png"><h3>IRCTC</h3></a>
+<a href="https://ttdevasthanams.ap.gov.in/home/dashboard" target="_blank" class="card"><img src="ttd.png"><h3>TTD</h3></a>
 
-<a href="https://www.tgpsc.gov.in/" target="_blank" class="card"><img src="tgpsc.png"><h3>TGPSC</h3><p>Govt Jobs</p></a>
-<a href="https://www.tgprb.in/" target="_blank" class="card"><img src="tgprb.png"><h3>TGPRB</h3><p>Police Jobs</p></a>
-<a href="https://www.rrbapply.gov.in/#/auth/landing" target="_blank" class="card"><img src="rrb.png"><h3>Railway Jobs</h3><p>RRB Apply</p></a>
-<a href="https://ssc.gov.in/login" target="_blank" class="card"><img src="ssc.png"><h3>SSC Jobs</h3><p>CGL · CHSL · MTS</p></a>
+<a href="https://www.tgpsc.gov.in/" target="_blank" class="card"><img src="tgpsc.png"><h3>TGPSC</h3></a>
+<a href="https://www.tgprb.in/" target="_blank" class="card"><img src="tgprb.png"><h3>TGPRB</h3></a>
+<a href="https://www.rrbapply.gov.in/#/auth/landing" target="_blank" class="card"><img src="rrb.png"><h3>Railway Jobs</h3></a>
+<a href="https://ssc.gov.in/login" target="_blank" class="card"><img src="ssc.png"><h3>SSC Jobs</h3></a>
 
-<a href="https://echallan.tspolice.gov.in/publicview/" target="_blank" class="card"><img src="tspolice.png"><h3>Police e-Challan</h3><p>Traffic Fine</p></a>
-<a href="https://tgsouthernpower.org/" target="_blank" class="card"><img src="tgspdcl.png"><h3>Electricity</h3><p>Bill Payment</p></a>
-<a href="https://bhubharati.telangana.gov.in/homePage?lang=en" target="_blank" class="card"><img src="bhubharati.png"><h3>Bhu Bharati</h3><p>Land Records</p></a>
-<a href="https://voters.eci.gov.in/login" target="_blank" class="card"><img src="voter.png"><h3>Voter ID</h3><p>Registration</p></a>
+<a href="https://echallan.tspolice.gov.in/publicview/" target="_blank" class="card"><img src="tspolice.png"><h3>Police e-Challan</h3></a>
+<a href="https://tgsouthernpower.org/" target="_blank" class="card"><img src="tgspdcl.png"><h3>Electricity</h3></a>
+<a href="https://bhubharati.telangana.gov.in/homePage?lang=en" target="_blank" class="card"><img src="bhubharati.png"><h3>Bhu Bharati</h3></a>
+<a href="https://voters.eci.gov.in/login" target="_blank" class="card"><img src="voter.png"><h3>Voter ID</h3></a>
 
 </div>
 </section>
@@ -227,7 +200,6 @@ footer{
 <section>
 <h2>Online Tools</h2>
 <div class="grid">
-
 <a href="https://www.ilovepdf.com/jpg_to_pdf" target="_blank" class="card"><h3>JPG to PDF</h3></a>
 <a href="https://www.ilovepdf.com/pdf_to_word" target="_blank" class="card"><h3>PDF to Word</h3></a>
 <a href="https://www.ilovepdf.com/pdf_to_excel" target="_blank" class="card"><h3>PDF to Excel</h3></a>
@@ -235,7 +207,6 @@ footer{
 <a href="https://www.ilovepdf.com/edit_pdf" target="_blank" class="card"><h3>PDF Editor</h3></a>
 <a href="https://www.imgonline.com.ua/eng/crop-image.php" target="_blank" class="card"><h3>JPG Crop</h3></a>
 <a href="https://www.idphoto4you.com/" target="_blank" class="card"><h3>Passport Photo</h3></a>
-
 </div>
 </section>
 
@@ -243,24 +214,14 @@ footer{
 <section>
 <h2>Our Location</h2>
 <div class="map-box">
-<iframe src="https://www.google.com/maps?q=bajJrSG7C8PaxbWY8&output=embed"
-width="100%" height="350" style="border:0;"></iframe>
-</div>
-
-<div style="text-align:center;margin-top:15px;">
-<a href="https://maps.app.goo.gl/bajJrSG7C8PaxbWY8" target="_blank"
-style="background:#0b2c5d;color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;">
-📍 Get Directions
-</a>
+<iframe src="https://www.google.com/maps?q=bajJrSG7C8PaxbWY8&output=embed" width="100%" height="350"></iframe>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
 © 2026 Sadhya Sri Communications
 </footer>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/917093199527" class="whatsapp" target="_blank">💬</a>
 
 </body>
