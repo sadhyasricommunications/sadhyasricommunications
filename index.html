@@ -6,21 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-  margin:0;
-  font-family:Segoe UI,Arial,sans-serif;
-  background:#f4f6fb;
-  color:#333;
-}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6fb;color:#333}
 
 /* TOP BAR */
-.top-bar{
-  background:#0b2c5d;
-  color:#fff;
-  padding:8px;
-  text-align:center;
-  font-size:14px;
-}
+.top-bar{background:#0b2c5d;color:#fff;padding:8px;text-align:center;font-size:14px}
 .top-bar a{color:#fff;text-decoration:none;font-weight:600}
 
 /* HEADER */
@@ -32,19 +21,9 @@ body{
   border-bottom:2px solid #eee;
 }
 .shop-logo{height:80px}
-.header-center{
-  flex:1;
-  text-align:center;
-}
-.shop-name-img{
-  max-width:520px;
-  width:90%;
-}
-.tagline{
-  font-size:14px;
-  color:#555;
-  margin-top:6px;
-}
+.header-center{flex:1;text-align:center}
+.shop-name-img{max-width:520px;width:90%}
+.tagline{font-size:14px;color:#555;margin-top:6px}
 
 /* NOTICE */
 .notice-bar{
@@ -54,21 +33,11 @@ body{
   padding:10px;
   font-weight:600;
 }
-.notice-bar a{
-  color:#c0392b;
-  margin-right:40px;
-  text-decoration:none;
-}
+.notice-bar a{color:#c0392b;margin-right:40px;text-decoration:none}
 
 /* SECTIONS */
-section{
-  padding:40px 20px;
-}
-h2{
-  text-align:center;
-  color:#0b2c5d;
-  margin-bottom:30px;
-}
+section{padding:40px 20px}
+h2{text-align:center;color:#0b2c5d;margin-bottom:30px}
 
 /* GRID */
 .grid{
@@ -88,21 +57,12 @@ h2{
   text-decoration:none;
   color:#333;
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  transition:0.2s;
+  transition:.2s;
 }
 .card:hover{transform:translateY(-5px)}
-.card img{
-  height:80px;
-  margin-bottom:15px;
-}
-.card h3{
-  color:#0b2c5d;
-  margin:10px 0;
-}
-.card p{
-  font-size:14px;
-  line-height:1.5;
-}
+.card img{height:80px;margin-bottom:15px}
+.card h3{color:#0b2c5d;margin:10px 0}
+.card p{font-size:14px;line-height:1.5}
 
 /* OWNER */
 .owner-box{
@@ -115,48 +75,27 @@ h2{
   box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 .owner-box img{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  object-fit:cover;
-  object-position:top;
-  border:5px solid #0b2c5d;
-  margin-bottom:18px;
+  width:160px;height:160px;border-radius:50%;
+  object-fit:cover;object-position:top;
+  border:5px solid #0b2c5d;margin-bottom:18px;
 }
 
 /* MAP */
 .map-box{
-  max-width:1000px;
-  margin:auto;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  max-width:1000px;margin:auto;border-radius:12px;
+  overflow:hidden;box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
 
 /* FOOTER */
-footer{
-  background:#0b2c5d;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-}
+footer{background:#0b2c5d;color:#fff;text-align:center;padding:15px}
 
 /* WHATSAPP */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#fff;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  text-decoration:none;
-  z-index:999;
+  position:fixed;bottom:20px;right:20px;
+  background:#25d366;color:#fff;
+  width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;text-decoration:none;z-index:999;
 }
 
 /* MOBILE */
@@ -177,14 +116,14 @@ footer{
 
 <!-- HEADER -->
 <header class="main-header">
-  <img src="logo.png" class="shop-logo" alt="Shop Logo">
+  <img src="logo.png" class="shop-logo">
   <div class="header-center">
-    <img src="shopname.png" class="shop-name-img" alt="Sadhya Sri Communications">
+    <img src="shopname.png" class="shop-name-img">
     <div class="tagline">Government & Online Digital Services Under One Roof</div>
   </div>
 </header>
 
-<!-- NOTICE BAR -->
+<!-- NOTICE -->
 <div class="notice-bar">
 <marquee scrollamount="6">
 🔔 <a href="https://www.manadomakonda.in/" target="_blank">Telangana Govt Notifications</a>
@@ -197,8 +136,8 @@ footer{
 <section>
 <h2>Owner</h2>
 <div class="owner-box">
-  <img src="owner.jpg" alt="Kishore Janmula">
-  <h3 style="color:#0b2c5d;margin-bottom:5px;">Kishore Janmula</h3>
+  <img src="owner.jpg">
+  <h3>Kishore Janmula</h3>
   <p>Proprietor – Sadhya Sri Communications</p>
 </div>
 </section>
@@ -208,13 +147,20 @@ footer{
 <h2>Our Services</h2>
 <div class="grid">
 
+<a href="https://ts.meeseva.telangana.gov.in/" target="_blank" class="card"><img src="meeseva.png"><h3>MeeSeva Telangana</h3><p>Citizen Services</p></a>
+<a href="https://telanganaepass.cgg.gov.in/" target="_blank" class="card"><img src="epass.png"><h3>ePASS Telangana</h3><p>Scholarships</p></a>
 <a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="card"><img src="aadhaar.png"><h3>Aadhaar</h3><p>Update · Correction</p></a>
 <a href="https://unifiedportal-mem.epfindia.gov.in/" target="_blank" class="card"><img src="epfo.png"><h3>EPFO</h3><p>PF Services</p></a>
 <a href="https://udyamregistration.gov.in/" target="_blank" class="card"><img src="udyam.png"><h3>UDYAM</h3><p>MSME Registration</p></a>
+
+<a href="https://www.irctc.co.in/nget/train-search" target="_blank" class="card"><img src="irctc.png"><h3>IRCTC</h3><p>Train Booking</p></a>
+<a href="https://ttdevasthanams.ap.gov.in/home/dashboard" target="_blank" class="card"><img src="ttd.png"><h3>TTD</h3><p>Darshan & Seva</p></a>
+
 <a href="https://www.tgpsc.gov.in/" target="_blank" class="card"><img src="tgpsc.png"><h3>TGPSC</h3><p>Govt Jobs</p></a>
-<a href="https://www.tgprb.in/" target="_blank" class="card"><img src="tgprb.png"><h3>TGPRB</h3><p>Police Recruitment</p></a>
+<a href="https://www.tgprb.in/" target="_blank" class="card"><img src="tgprb.png"><h3>TGPRB</h3><p>Police Jobs</p></a>
 <a href="https://www.rrbapply.gov.in/#/auth/landing" target="_blank" class="card"><img src="rrb.png"><h3>Railway Jobs</h3><p>RRB Apply</p></a>
 <a href="https://ssc.gov.in/login" target="_blank" class="card"><img src="ssc.png"><h3>SSC Jobs</h3><p>CGL · CHSL · MTS</p></a>
+
 <a href="https://echallan.tspolice.gov.in/publicview/" target="_blank" class="card"><img src="tspolice.png"><h3>Police e-Challan</h3><p>Traffic Fine</p></a>
 <a href="https://tgsouthernpower.org/" target="_blank" class="card"><img src="tgspdcl.png"><h3>Electricity</h3><p>Bill Payment</p></a>
 <a href="https://bhubharati.telangana.gov.in/homePage?lang=en" target="_blank" class="card"><img src="bhubharati.png"><h3>Bhu Bharati</h3><p>Land Records</p></a>
@@ -233,8 +179,8 @@ footer{
 <a href="https://www.ilovepdf.com/pdf_to_excel" target="_blank" class="card"><h3>PDF to Excel</h3></a>
 <a href="https://www.ilovepdf.com/jpg_to_excel" target="_blank" class="card"><h3>JPG to Excel</h3></a>
 <a href="https://www.ilovepdf.com/edit_pdf" target="_blank" class="card"><h3>PDF Editor</h3></a>
-<a href="https://www.imgonline.com.ua/eng/crop-image.php" target="_blank" class="card"><h3>JPG Crop Tool</h3></a>
-<a href="https://www.idphoto4you.com/" target="_blank" class="card"><h3>Passport Size Photo</h3></a>
+<a href="https://www.imgonline.com.ua/eng/crop-image.php" target="_blank" class="card"><h3>JPG Crop</h3></a>
+<a href="https://www.idphoto4you.com/" target="_blank" class="card"><h3>Passport Photo</h3></a>
 
 </div>
 </section>
