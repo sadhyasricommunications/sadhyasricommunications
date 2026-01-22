@@ -6,10 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6fb;color:#333}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f4f6fb;
+  color:#333;
+}
 
 /* TOP BAR */
-.top-bar{background:#0b2c5d;color:#fff;padding:8px;text-align:center;font-size:14px}
+.top-bar{
+  background:#0b2c5d;
+  color:#fff;
+  padding:8px;
+  text-align:center;
+  font-size:14px;
+}
 .top-bar a{color:#fff;text-decoration:none;font-weight:600}
 
 /* HEADER */
@@ -17,13 +28,46 @@ body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6fb;color:#33
   background:#fff;
   display:flex;
   align-items:center;
+  justify-content:space-between;
   padding:15px 20px;
   border-bottom:2px solid #eee;
 }
 .shop-logo{height:80px}
-.header-center{flex:1;text-align:center}
-.shop-name-img{max-width:520px;width:90%}
-.tagline{font-size:14px;color:#555;margin-top:6px}
+
+.header-center{
+  flex:1;
+  text-align:center;
+}
+
+.shop-name-img{
+  max-width:520px;
+  width:90%;
+}
+
+.tagline{
+  font-size:14px;
+  color:#555;
+  margin-top:6px;
+}
+
+/* OWNER IN HEADER */
+.header-owner{
+  text-align:center;
+  margin-left:15px;
+}
+.header-owner img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #0b2c5d;
+}
+.owner-name{
+  font-size:12px;
+  font-weight:600;
+  color:#0b2c5d;
+  margin-top:4px;
+}
 
 /* NOTICE */
 .notice-bar{
@@ -33,11 +77,21 @@ body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6fb;color:#33
   padding:10px;
   font-weight:600;
 }
-.notice-bar a{color:#c0392b;margin-right:40px;text-decoration:none}
+.notice-bar a{
+  color:#c0392b;
+  margin-right:40px;
+  text-decoration:none;
+}
 
 /* SECTIONS */
-section{padding:40px 20px}
-h2{text-align:center;color:#0b2c5d;margin-bottom:30px}
+section{
+  padding:40px 20px;
+}
+h2{
+  text-align:center;
+  color:#0b2c5d;
+  margin-bottom:30px;
+}
 
 /* GRID */
 .grid{
@@ -64,44 +118,46 @@ h2{text-align:center;color:#0b2c5d;margin-bottom:30px}
 .card h3{color:#0b2c5d;margin:10px 0}
 .card p{font-size:14px;line-height:1.5}
 
-/* OWNER */
-.owner-box{
-  max-width:520px;
-  margin:auto;
-  background:#fff;
-  border-radius:18px;
-  padding:30px 25px;
-  text-align:center;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-.owner-box img{
-  width:160px;height:160px;border-radius:50%;
-  object-fit:cover;object-position:top;
-  border:5px solid #0b2c5d;margin-bottom:18px;
-}
-
 /* MAP */
 .map-box{
-  max-width:1000px;margin:auto;border-radius:12px;
-  overflow:hidden;box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  max-width:1000px;
+  margin:auto;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
 
 /* FOOTER */
-footer{background:#0b2c5d;color:#fff;text-align:center;padding:15px}
+footer{
+  background:#0b2c5d;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+}
 
 /* WHATSAPP */
 .whatsapp{
-  position:fixed;bottom:20px;right:20px;
-  background:#25d366;color:#fff;
-  width:60px;height:60px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:30px;text-decoration:none;z-index:999;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  z-index:999;
 }
 
 /* MOBILE */
 @media(max-width:768px){
   .main-header{flex-direction:column}
   .shop-logo{margin-bottom:10px}
+  .header-owner{margin-top:10px}
 }
 </style>
 </head>
@@ -116,11 +172,19 @@ footer{background:#0b2c5d;color:#fff;text-align:center;padding:15px}
 
 <!-- HEADER -->
 <header class="main-header">
-  <img src="logo.png" class="shop-logo">
+
+  <img src="logo.png" class="shop-logo" alt="Shop Logo">
+
   <div class="header-center">
-    <img src="shopname.png" class="shop-name-img">
+    <img src="shopname.png" class="shop-name-img" alt="Sadhya Sri Communications">
     <div class="tagline">Government & Online Digital Services Under One Roof</div>
   </div>
+
+  <div class="header-owner">
+    <img src="owner.jpg" alt="Kishore Janmula">
+    <div class="owner-name">Kishore Janmula</div>
+  </div>
+
 </header>
 
 <!-- NOTICE -->
@@ -131,16 +195,6 @@ footer{background:#0b2c5d;color:#fff;text-align:center;padding:15px}
 🔔 <a href="https://www.tgpsc.gov.in/" target="_blank">TGPSC Updates</a>
 </marquee>
 </div>
-
-<!-- OWNER -->
-<section>
-<h2>Owner</h2>
-<div class="owner-box">
-  <img src="owner.jpg">
-  <h3>Kishore Janmula</h3>
-  <p>Proprietor – Sadhya Sri Communications</p>
-</div>
-</section>
 
 <!-- SERVICES -->
 <section>
