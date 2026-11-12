@@ -2,67 +2,227 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Sadhya Sri Communications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sadhya Sri Communications, Narayankhed - MeeSeva, Aadhaar, government applications, job services, printing and online digital services.">
-<title>Sadhya Sri Communications | Digital Services</title>
+
 <style>
-:root{--navy:#123b2a;--blue:#16764a;--cyan:#22a06b;--purple:#238653;--green:#18a957;--yellow:#e9f7ee;--orange:#e9f7ee;--pink:#dff3e6;--ink:#20352a;--muted:#66766c;--bg:#f7fbf8;--white:#fff;--line:#e1eee5;--shadow:0 14px 38px rgba(20,90,50,.10)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-a{text-decoration:none;color:inherit}.topline{background:#0c2146;color:#eaf3ff;font-size:13px;padding:8px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 4px 20px rgba(15,42,85,.07)}
-.nav{max-width:1200px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:66px;height:66px;object-fit:contain;display:block}.brand-name{width:min(270px,28vw);height:auto;max-height:66px;object-fit:contain;display:block}.brand small{color:var(--muted);font-size:12px;display:block;margin-top:2px}
-nav{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:700;color:#34445f}nav a:hover{color:var(--blue)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(105deg,#16764a,#20a65d);color:white;padding:11px 17px;border-radius:11px;font-weight:800;font-size:14px;box-shadow:0 7px 18px #16764a33}.btn:hover{background:#12643e;transform:translateY(-1px)}
-.hero{background:radial-gradient(circle at 85% 20%,#36b87555 0,transparent 26%),radial-gradient(circle at 10% 90%,#bde8cb66 0,transparent 25%),linear-gradient(120deg,#123b2a,#18784a 60%,#239b62);color:#fff;padding:76px 22px 70px;overflow:hidden}
-.hero-inner{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:40px}
-.eyebrow{display:inline-block;background:#ffffff20;border:1px solid #ffffff45;border-radius:30px;padding:7px 13px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.hero h2{font-size:clamp(34px,5vw,56px);line-height:1.08;margin:18px 0 14px;max-width:720px}.hero p{color:#e4efff;font-size:17px;max-width:650px;margin:0 0 25px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn.light{background:#fff;color:var(--navy);box-shadow:none}.hero-card{background:#ffffff16;border:1px solid #ffffff42;border-radius:24px;padding:25px;backdrop-filter:blur(8px);box-shadow:0 20px 50px #071b3d33}.hero-card .big{font-size:44px}.hero-card h3{margin:5px 0 8px;font-size:21px}.hero-card p{font-size:14px;margin:0;color:#e6f0ff}
-.ticker{background:#fff;border-bottom:1px solid var(--line);padding:12px 5%;display:flex;gap:15px;align-items:center;overflow:hidden}.ticker strong{background:#fff4d6;color:#a65a08;padding:6px 10px;border-radius:7px;white-space:nowrap;font-size:12px}.ticker-track{display:flex;gap:30px;white-space:nowrap;overflow:auto;color:#42516a;font-size:13px;font-weight:700}.ticker a:hover{color:var(--blue)}
-section{max-width:1200px;margin:auto;padding:65px 22px}.section-head{text-align:center;margin-bottom:30px}.section-head span{color:#16834b;font-weight:900;text-transform:uppercase;letter-spacing:1.4px;font-size:11px}.section-head h2{font-size:32px;color:var(--navy);margin:7px 0}.section-head p{color:var(--muted);margin:0}
-.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service{background:#fff;border:1px solid var(--line);border-radius:17px;padding:21px 18px;min-height:158px;transition:.2s;box-shadow:0 4px 14px #183a6808;display:flex;flex-direction:column}.service:hover{transform:translateY(-5px);border-color:#bfaaf5;box-shadow:var(--shadow)}.service .ico{width:52px;height:52px;border-radius:13px;background:#f0f8f2;display:grid;place-items:center;font-size:22px;margin-bottom:13px;overflow:hidden}.service .ico img{width:100%;height:100%;object-fit:contain;padding:3px}.service h3{font-size:15px;margin:0 0 5px;color:var(--navy)}.service p{font-size:12px;color:var(--muted);margin:0 0 12px}.service b{font-size:12px;color:#16834b;margin-top:auto}
-.tools{background:#edf3fb}.tools-inner{max-width:1200px;margin:auto;padding:60px 22px}.tools .service-grid{grid-template-columns:repeat(4,1fr)}
-.notice{max-width:1156px;margin:0 auto 5px;background:linear-gradient(100deg,#fff,#f5f9ff);border:1px solid #dce8f8;border-radius:18px;padding:23px;display:flex;align-items:center;justify-content:space-between;gap:18px}.notice h3{margin:0;color:var(--navy)}.notice p{margin:4px 0 0;color:var(--muted);font-size:14px}
-.contact-wrap{background:#102a56;color:#fff}.contact-inner{max-width:1200px;margin:auto;padding:60px 22px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.contact-inner h2{font-size:32px;margin:0 0 10px}.contact-inner p{color:#d7e5fb}.contact-card{background:#fff;color:var(--ink);border-radius:20px;padding:25px;box-shadow:var(--shadow)}.contact-card h3{margin:0 0 13px;color:var(--navy)}.contact-line{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}.contact-line:last-child{border:0}.contact-line b{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.8px}
-footer{background:#091a37;color:#c6d4e9;padding:22px 5%;font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.float-wa{position:fixed;right:20px;bottom:20px;background:#20bd68;color:#fff;border-radius:50px;padding:13px 18px;font-weight:900;box-shadow:0 10px 25px #092c1c44;z-index:30}
-@media(max-width:900px){nav{display:none}.service-grid,.tools .service-grid{grid-template-columns:repeat(2,1fr)}.hero-inner{grid-template-columns:1fr}.hero-card{max-width:460px}.contact-inner{grid-template-columns:1fr}}
-@media(max-width:520px){.topline{justify-content:center;text-align:center}.nav{padding:11px 15px}.brand-name{width:min(205px,52vw);max-height:52px}.brand small{font-size:10px}.logo{width:48px;height:48px}.hero{padding:55px 18px}.hero p{font-size:15px}section{padding:48px 16px}.section-head h2{font-size:26px}.service-grid,.tools .service-grid{grid-template-columns:1fr 1fr;gap:10px}.service{padding:15px 13px;min-height:160px}.notice{margin:0 14px;display:block}.contact-inner{padding:48px 16px}.float-wa{right:12px;bottom:12px}}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6fb;color:#333}
+
+/* TOP BAR */
+.top-bar{background:#0b2c5d;color:#fff;padding:8px;text-align:center;font-size:14px}
+
+/* HEADER */
+.main-header{
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 20px;
+  border-bottom:2px solid #eee;
+}
+.shop-logo{height:80px}
+
+.header-center{flex:1;text-align:center}
+.shop-name-img{max-width:520px;width:90%}
+.tagline{font-size:14px;color:#555;margin-top:6px}
+
+/* SHOP PHONES */
+.shop-phones{
+  margin-top:6px;
+  font-size:14px;
+  font-weight:600;
+}
+.shop-phones a{
+  color:#0b2c5d;
+  text-decoration:none;
+  margin:0 8px;
+}
+
+/* OWNER */
+.header-owner{text-align:center;margin-left:15px}
+.header-owner img{
+  width:120px;
+  height:auto;
+  border-radius:8px;
+  object-fit:contain;
+  border:2px solid #0b2c5d;
+}
+.owner-name{font-size:13px;font-weight:600;color:#0b2c5d;margin-top:6px}
+.owner-phone{font-size:13px;font-weight:600}
+.owner-phone a{color:#0b2c5d;text-decoration:none}
+.owner-whatsapp{margin-top:5px;font-size:13px;font-weight:600}
+.owner-whatsapp a{color:#25d366;text-decoration:none}
+
+/* NOTICE */
+.notice-bar{
+  background:#fffae6;
+  border-top:2px solid #f4c430;
+  border-bottom:2px solid #f4c430;
+  padding:10px;
+  font-weight:600;
+}
+.notice-bar a{color:#c0392b;margin-right:40px;text-decoration:none}
+
+/* SECTION */
+section{padding:40px 20px}
+h2{text-align:center;color:#0b2c5d;margin-bottom:30px}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:25px;
+  text-align:center;
+  text-decoration:none;
+  color:#333;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:.2s;
+}
+.card:hover{transform:translateY(-5px)}
+.card img{height:80px;margin-bottom:15px}
+.card h3{color:#0b2c5d;margin:10px 0}
+.card p{font-size:14px}
+
+/* MAP */
+.map-box{
+  max-width:1000px;
+  margin:auto;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer{background:#0b2c5d;color:#fff;text-align:center;padding:15px}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  z-index:999;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .main-header{flex-direction:column}
+  .shop-logo{margin-bottom:10px}
+  .header-owner{margin-top:10px}
+}
 </style>
 </head>
+
 <body>
-<div class="topline"><span>📍 Hyderabad Road, Near Fish Market, Narayankhed – 502286</span><span>📞 7093199527&nbsp; | &nbsp;6300538312</span></div>
-<header><div class="nav">
-<a class="brand" href="#home" aria-label="Sadhya Sri Communications home"><img class="brand-logo" src="logo.png" alt="Original Sadhya Sri Communications logo"><div><img class="brand-name" src="shopname.png" alt="Sadhya Sri Communications"><small>Government & Online Digital Services</small></div></a>
-<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#tools">Online Tools</a><a href="#contact">Contact</a></nav>
-<a class="btn" href="https://wa.me/916300538312" target="_blank" rel="noopener">💬 WhatsApp Us</a>
-</div></header>
-<main id="home">
-<div class="hero"><div class="hero-inner">
-<div><span class="eyebrow">Your trusted digital service centre</span><h2>All Your Online Services, <span style="color:#8debf0">In One Place.</span></h2><p>Government applications, job services, Aadhaar, MeeSeva, printing and digital assistance — friendly support for your everyday needs.</p><div class="hero-actions"><a class="btn light" href="#services">Explore Services&nbsp; →</a><a class="btn" style="background:#16a765" href="https://wa.me/916300538312" target="_blank" rel="noopener">Chat on WhatsApp</a></div></div>
-<div class="hero-card"><div class="big">🏢</div><h3>Sadhya Sri Communications</h3><p>Visit our centre at Narayankhed for application assistance and digital services.</p><p style="margin-top:17px;font-weight:800;color:#fff">📞 6300538312 · 7093199527</p></div>
-</div></div>
-<div class="ticker"><strong>🔔 LATEST UPDATES</strong><div class="ticker-track"><a href="https://www.manadomakonda.in/" target="_blank" rel="noopener">Telangana Government Notifications ↗</a><a href="https://www.freejobalert.com/#goog_rewarded" target="_blank" rel="noopener">Free Job Alert ↗</a><a href="https://www.tgpsc.gov.in/" target="_blank" rel="noopener">TGPSC Updates ↗</a><a href="https://www.tgprb.in/" target="_blank" rel="noopener">Telangana Police Recruitment ↗</a></div></div>
-<section id="services"><div class="section-head"><span>What we do</span><h2>Our Digital Services</h2><p>Quick access to commonly used government portals and online services.</p></div>
-<div class="service-grid">
-<a class="service" href="https://ts.meeseva.telangana.gov.in/" target="_blank" rel="noopener"><div class="ico"><img src="bhubharati.png" alt="Bhu Bharati logo"></div><h3>Bhu Bharati</h3><p>Telangana land records services.</p><b>Open service →</b></a>
-<a class="service" href="https://voters.eci.gov.in/login" target="_blank" rel="noopener"><div class="ico">🗳️</div><h3>Voter ID Services</h3><p>Election Commission voter portal.</p><b>Open service →</b></a>
-<a class="service" href="https://www.freejobalert.com/#goog_rewarded" target="_blank" rel="noopener"><div class="ico">🔔</div><h3>Job Notifications</h3><p>Explore latest recruitment alerts.</p><b>Open updates →</b></a>
-</div></section>
-<div class="tools" id="tools"><div class="tools-inner"><div class="section-head"><span>Helpful utilities</span><h2>Online Tools</h2><p>Useful tools for documents, photos and everyday file work.</p></div><div class="service-grid">
-<a class="service" href="https://www.ilovepdf.com/jpg_to_pdf" target="_blank" rel="noopener"><div class="ico">🖼️</div><h3>JPG to PDF</h3><p>Convert images into PDF files.</p><b>Use tool →</b></a>
-<a class="service" href="https://www.ilovepdf.com/pdf_to_word" target="_blank" rel="noopener"><div class="ico">📄</div><h3>PDF to Word</h3><p>Convert PDF documents to Word.</p><b>Use tool →</b></a>
-<a class="service" href="https://www.ilovepdf.com/pdf_to_excel" target="_blank" rel="noopener"><div class="ico">📊</div><h3>PDF to Excel</h3><p>Convert PDF tables to spreadsheets.</p><b>Use tool →</b></a>
-<a class="service" href="https://www.ilovepdf.com/jpg_to_excel" target="_blank" rel="noopener"><div class="ico">📈</div><h3>JPG to Excel</h3><p>Extract tables from image files.</p><b>Use tool →</b></a>
-<a class="service" href="https://www.ilovepdf.com/edit-pdf" target="_blank" rel="noopener"><div class="ico">✏️</div><h3>PDF Editor</h3><p>Edit and annotate PDF documents.</p><b>Use tool →</b></a>
-<a class="service" href="https://www.imgonline.com.ua/eng/cut-photo-into-pieces.php" target="_blank" rel="noopener"><div class="ico">✂️</div><h3>JPG Crop</h3><p>Crop and adjust image dimensions.</p><b>Use tool →</b></a>
-<a class="service" href="https://www.idphoto4you.com/" target="_blank" rel="noopener"><div class="ico">📸</div><h3>Passport Photo</h3><p>Prepare passport-size photographs.</p><b>Use tool →</b></a>
-</div></div></div>
-<section><div class="notice"><div><h3>Need help with an application?</h3><p>Contact or visit Sadhya Sri Communications for assistance with online applications and document services.</p></div><a class="btn" href="https://wa.me/916300538312" target="_blank" rel="noopener">Contact Us →</a></div></section>
-<div class="contact-wrap" id="contact"><div class="contact-inner"><div><span class="eyebrow">We are here to help</span><h2>Visit Our Service Centre</h2><p>For online applications, government services, job applications, printing and document assistance, get in touch with us.</p><a class="btn" style="background:#18a963" href="https://wa.me/916300538312" target="_blank" rel="noopener">💬 WhatsApp 6300538312</a></div>
-<div class="contact-card"><h3>Sadhya Sri Communications</h3><div class="contact-line"><b>Owner</b>Kishore Janmula</div><div class="contact-line"><b>Mobile numbers</b><a href="tel:6300538312">6300538312</a> &nbsp;|&nbsp; <a href="tel:7093199527">7093199527</a></div><div class="contact-line"><b>Address</b>Hyderabad Road, Near Fish Market, Narayankhed – 502286</div><div class="contact-line"><b>Email</b><a href="mailto:sadhyasricommunications@gmail.com">sadhyasricommunications@gmail.com</a></div><div class="contact-line"><b>Shop location</b><a style="color:#1769d2;font-weight:800" href="https://maps.app.goo.gl/bajJrSG7C8PaxbWY8" target="_blank" rel="noopener">Get directions on Google Maps →</a></div></div>
-</div></div>
-</main>
-<footer><span>© 2026 Sadhya Sri Communications. All rights reserved.</span><span>Government & Online Digital Services · Narayankhed</span></footer>
-<a class="float-wa" href="https://wa.me/916300538312" target="_blank" rel="noopener">☘ WhatsApp</a>
-<!-- Keep all existing PNG/JPG logo and image files in this same GitHub repository. -->
-</body></html>
+
+<div class="top-bar">
+Welcome to Sadhya Sri Communications
+</div>
+
+<header class="main-header">
+
+  <img src="logo.png" class="shop-logo">
+
+  <div class="header-center">
+    <img src="shopname.png" class="shop-name-img">
+    <div class="tagline">Government & Online Digital Services Under One Roof</div>
+    <div class="shop-phones">
+      📞 <a href="tel:7093199527">7093199527</a> |
+      <a href="tel:6300538312">6300538312</a>
+    </div>
+  </div>
+
+  <div class="header-owner">
+    <img src="owner.jpg">
+    <div class="owner-name">Kishore Janmula</div>
+    <div class="owner-phone">📞 <a href="tel:7093199527">7093199527</a></div>
+    <div class="owner-whatsapp">
+      <a href="https://wa.me/917093199527" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+
+</header>
+
+<div class="notice-bar">
+<marquee scrollamount="6">
+🔔 <a href="https://www.manadomakonda.in/" target="_blank">Telangana Govt Notifications</a>
+🔔 <a href="https://www.freejobalert.com/#goog_rewarded" target="_blank">Free Job Alert</a>
+🔔 <a href="https://www.tgpsc.gov.in/" target="_blank">TGPSC Updates</a>
+</marquee>
+</div>
+
+<!-- ALL SERVICES -->
+<section>
+<h2>Our Services</h2>
+<div class="grid">
+
+<a href="https://ts.meeseva.telangana.gov.in/" target="_blank" class="card"><img src="meeseva.png"><h3>MeeSeva Telangana</h3></a>
+<a href="https://telanganaepass.cgg.gov.in/" target="_blank" class="card"><img src="epass.png"><h3>ePASS Telangana</h3></a>
+<a href="https://myaadhaar.uidai.gov.in/en_IN" target="_blank" class="card"><img src="aadhaar.png"><h3>Aadhaar</h3></a>
+<a href="https://unifiedportal-mem.epfindia.gov.in/" target="_blank" class="card"><img src="epfo.png"><h3>EPFO</h3></a>
+<a href="https://udyamregistration.gov.in/" target="_blank" class="card"><img src="udyam.png"><h3>UDYAM</h3></a>
+
+<a href="https://www.irctc.co.in/nget/train-search" target="_blank" class="card"><img src="irctc.png"><h3>IRCTC</h3></a>
+<a href="https://ttdevasthanams.ap.gov.in/home/dashboard" target="_blank" class="card"><img src="ttd.png"><h3>TTD</h3></a>
+
+<a href="https://www.tgpsc.gov.in/" target="_blank" class="card"><img src="tgpsc.png"><h3>TGPSC</h3></a>
+<a href="https://www.tgprb.in/" target="_blank" class="card"><img src="tgprb.png"><h3>TGPRB</h3></a>
+<a href="https://www.rrbapply.gov.in/#/auth/landing" target="_blank" class="card"><img src="rrb.png"><h3>Railway Jobs</h3></a>
+<a href="https://ssc.gov.in/login" target="_blank" class="card"><img src="ssc.png"><h3>SSC Jobs</h3></a>
+
+<a href="https://echallan.tspolice.gov.in/publicview/" target="_blank" class="card"><img src="tspolice.png"><h3>Police e-Challan</h3></a>
+<a href="https://tgsouthernpower.org/" target="_blank" class="card"><img src="tgspdcl.png"><h3>Electricity</h3></a>
+<a href="https://bhubharati.telangana.gov.in/homePage?lang=en" target="_blank" class="card"><img src="bhubharati.png"><h3>Bhu Bharati</h3></a>
+<a href="https://voters.eci.gov.in/login" target="_blank" class="card"><img src="voter.png"><h3>Voter ID</h3></a>
+
+</div>
+</section>
+
+<!-- ONLINE TOOLS -->
+<section>
+<h2>Online Tools</h2>
+<div class="grid">
+<a href="https://www.ilovepdf.com/jpg_to_pdf" target="_blank" class="card"><h3>JPG to PDF</h3></a>
+<a href="https://www.ilovepdf.com/pdf_to_word" target="_blank" class="card"><h3>PDF to Word</h3></a>
+<a href="https://www.ilovepdf.com/pdf_to_excel" target="_blank" class="card"><h3>PDF to Excel</h3></a>
+<a href="https://www.ilovepdf.com/jpg_to_excel" target="_blank" class="card"><h3>JPG to Excel</h3></a>
+<a href="https://www.ilovepdf.com/edit_pdf" target="_blank" class="card"><h3>PDF Editor</h3></a>
+<a href="https://www.imgonline.com.ua/eng/crop-image.php" target="_blank" class="card"><h3>JPG Crop</h3></a>
+<a href="https://www.idphoto4you.com/" target="_blank" class="card"><h3>Passport Photo</h3></a>
+</div>
+</section>
+
+<!-- LOCATION -->
+<section>
+<h2>Our Location</h2>
+<div class="map-box">
+<iframe src="https://www.google.com/maps?q=bajJrSG7C8PaxbWY8&output=embed" width="100%" height="350"></iframe>
+</div>
+</section>
+
+<footer>
+© 2026 Sadhya Sri Communications
+</footer>
+
+<a href="https://wa.me/917093199527" class="whatsapp" target="_blank">💬</a>
+
+</body>
+</html>
